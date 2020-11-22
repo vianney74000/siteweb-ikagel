@@ -67,10 +67,11 @@ img {
   justify-content: right;
 }
 
-.navbar a,
-.navbar p {
+.navbar .ul > li > a {
   color: #fff;
   padding: 11.5px 20px;
+  margin-bottom: 10px;
+  display: block;
 }
 
 .navbar .nested-ul {
@@ -81,11 +82,12 @@ img {
 }
 
 .navbar .nested-ul li a {
-  padding: 10px 20px;
+  padding: 11.5px 20px;
   display: block;
-  background: rgba(38, 54, 112, 0.503);
+  background: rgba(38, 54, 112, 1);
   width: 230px;
   display: none;
+  color: #fff;
 }
 
 .navbar li:nth-child(1):hover .nested-ul li a {

@@ -33,7 +33,7 @@
       <nav>
         <ul class="ul">
           <li>
-            <p>Nos produits</p>
+            <a href="#selection">Nos produits</a>
             <ul class="nested-ul">
               <li><a href="#" class="sub-liste"> <div> Exotiques Traditionels</div></a></li>
               <li><a href="#" class="sub-liste"><div> Poulpe cuit en Bretagne</div></a></li>
@@ -80,9 +80,9 @@
           <a href="#"><div id="bretagne" ></div></a>
         </div>
         <div id="boxe-3" class="box">
-          <h2>Mer du Nord</h2>
+          <h2>Mer de Norvège</h2>
           <p>Les poissons et crustacés de nos partenaires pêcheurs à la ligne de norvège </p>
-          <a href="#"><div id="nordique"></div></a>
+          <a href="mer-de-norvège.html"><div id="nordique"></div></a>
         </div>
       </div>
       <div id="selection_mentra">
@@ -173,8 +173,11 @@
 </footer>
 
 
-<!-- Lightbox -->
-<script src="js/lightbox.min.js"></script>
+<script 
+  src="https://code.jquery.com/jquery-3.5.1.js" 
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+  crossorigin="anonymous">
+</script>
 
 
 <!-- bare de tache -->
@@ -203,6 +206,28 @@
       scrolled = false;
     }
   }
+
+  // Smooth scrolling
+  
+  // select liens et btn (en fait on a retiré btn car il s'avère que la même classe est utilisé pour le bouton de la Form et que ce code nullifie l'action par défaut associé au clics sur ces classes, or ca empecherait donc l'action de subission de la form puisque Submit a une classe de btn) - quand on click dessus, active la fonction e
+  $('#navbar a ').on('click', function (e) {
+    if (this.hash !=='') {
+      e.preventDefault();
+
+      const hash = this.hash;
+
+      // si le if est respecter, on annime le html et le body
+      $('html, body').animate(
+        {
+          // on scroll top jusqu'a hash qui est en fait this.hash
+          // les -100 sont pour qu'on arrive un peu au dessus et non en plein dedans - élégance
+          scrollTop: $(hash).offset().top - 100
+        },
+        // le 400 détermine la vitesse à laquelle ca va défiller plus haut plus lent
+        400
+      );
+    }
+  });
 
 </script>
 
