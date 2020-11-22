@@ -1,0 +1,531 @@
+/* un autre moyen d'importer un FONT, plutot que d'inclure le lien dans le HTML, je peux l'importer comme ca dans mon style */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+/* BASE STYLES */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  font-weight: 300px;
+  line-height: 1.2;
+}
+
+p {
+  margin: 10px 0;
+}
+
+img {
+  width: 100%;
+}
+
+/* NAVBAR */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(38, 54, 112, 0.503);
+  color: #fff;
+  opacity: 0.8;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0px;
+  padding: 0 5vw;
+  transition: 0.25s ease-in;
+  z-index: 1;
+}
+
+.navbar:hover {
+  background: rgba(38, 54, 112, 1);
+}
+
+.navbar .ul {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.navbar a,
+.navbar p {
+  color: #fff;
+  padding: 11.5px 20px;
+}
+
+.navbar .nested-ul {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  align-items: flex-start;
+}
+
+.navbar .nested-ul li a {
+  padding: 10px 20px;
+  display: block;
+  background: rgba(38, 54, 112, 0.503);
+  width: 230px;
+  display: none;
+}
+
+.navbar li:nth-child(1):hover .nested-ul li a {
+  display: block;
+}
+
+.navbar .sub-liste > div {
+  padding: none;
+}
+
+.navbar a:hover,
+/* .navbar p:hover, */
+.navbar .ul > li:nth-child(1):hover p {
+  border-bottom: solid 2px #fff;
+  cursor: pointer;
+}
+
+.navbar a.sub-liste:hover {
+  border: none;
+}
+
+/* .navbar a.sub-liste:hover > div {
+  border-bottom: solid 2px #fff;
+} */
+
+.navbar .nested-ul li a:hover {
+  color: #000;
+  text-shadow: 0.1rem 0.1rem 0.8rem steelblue;
+}
+
+.navbar.top {
+  background: transparent;
+}
+
+a .logo {
+  width: 120px;
+  height: 30px;
+  background: url("/img/logo.PNG") center center / cover no-repeat;
+}
+
+/* Hero */
+
+#hero {
+  background: url("../img/home/showcase.jpg") center center/cover no-repeat;
+  height: 85vh;
+  /* min heigh pour mode paysage toute petites heigh, que ca entre pas le titre dans la navbar */
+  min-height: 400px;
+  /* pourquoi relative ? pour l'overlay qui arrive après et qui doit être absolute dans hero */
+  position: relative;
+  background-color: #fff;
+}
+
+#hero .content {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  height: 100%;
+  /* padding top pour que quand width tout petit, le content ne soit pas poussé vers le haut dans la nav bar mais en bas */
+  padding: 100px 5vw 0 5vw;
+}
+
+#hero .content h2 {
+  font-size: 40px;
+  margin-bottom: 5vh;
+  max-width: 1200px;
+}
+
+/* je vais inséré quelquechose directement en CSS */
+/* on pourrait inséré du contenu dans content mais préférable de le faire en html */
+/* ici on va juste coller un background noir transparent pour effet de transparance */
+/* que je mette before ou after change rien, car je le dispose à l'intérieur de Hero. Ca aurait pu être un div dans le html mais on dira que ca fait plus clean si tout l'effet est uniquement dans le css */
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* RGBA avec 4 chiffres, le dernier est l'opacity */
+  /* si on met noir + transparant, ca fait cet effect background */
+  background: rgba(5, 1, 56, 0.1);
+}
+
+/* tout ce qui est dans hero passera devant hero (normal) et devant le reste (notamment le background transparent que j'ai inséré au dessus) */
+/* automatiquement le before est devant le Hero mais uniquement la hero grace a ca puisque tout ce qui est dedans passe devant. C'est infiniment plus simple que de faire les z-index 1 a 1, notamment que certains éléments ne sont même pas dans cette partie du CSS */
+#hero * {
+  z-index: 10;
+}
+
+#hero.blog {
+  background: url("../img/home/blog.jpg") center center/cover no-repeat;
+  height: 30vh;
+  min-height: 200px;
+}
+#hero.blog .content {
+  padding-top: 50px;
+}
+
+/* Nos produits*/
+
+#selection {
+  padding: 10vh 0;
+}
+
+#selection_titre {
+  margin-bottom: 10vh;
+  font-size: 1.7rem;
+}
+
+#selection_contenu {
+  margin-bottom: 10vh;
+}
+
+.flex-items {
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+#selection .box {
+  display: flex;
+  flex-direction: column;
+  padding: 5vh 0vh 2vw;
+  width: 25%;
+}
+
+#selection #boxe-2 {
+  width: 40%;
+  padding: 0 2vw;
+  font-size: 1.2rem;
+}
+
+#selection #exotique {
+  background: url(/img/home/MAP-AF.png) center center/200px no-repeat;
+  transition: 1s;
+  height: 350px;
+}
+
+#selection #exotique:hover {
+  background: url(/img/home/photo-exo.png) center center/200px no-repeat;
+}
+
+#selection #bretagne {
+  background: url(/img/home/MAP-FR.png) center center/300px no-repeat;
+  transition: 1s;
+  height: 350px;
+  margin-top: 5vh;
+}
+
+#selection #bretagne:hover {
+  background: url(/img/home/poulpe.png) center center/300px no-repeat;
+}
+
+#selection #nordique {
+  background: url(/img/home/Map-SCANDI.png) center center/200px no-repeat;
+  transition: 1s;
+  width: 100%;
+  height: 350px;
+}
+
+#selection #nordique:hover {
+  background: url(/img/home/produit_mer_de_norvège.png) center center/200px
+    no-repeat;
+}
+
+#selection_mentra {
+  text-align: center;
+}
+
+/* .flex-items > div:nth-child(2) {
+  width: 35%;
+} */
+
+/* Test transparent */
+
+.encart-transparent {
+  height: 40vh;
+}
+
+/* photo background */
+
+#photo-background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+/* notre entreprise */
+
+#Notre-entreprise_contenu {
+  background: #f4f4f4;
+  height: 60vh;
+}
+
+#Notre-entreprise .column-1 {
+  background: url(/img/home/Phare.png) center 20px / 200px no-repeat;
+  width: 15%;
+}
+
+#Notre-entreprise .column-2 {
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  width: 65%;
+}
+
+#Notre-entreprise .column-2 h4 {
+  margin-bottom: 5vh;
+  font-size: 1.5rem;
+}
+
+#Notre-entreprise .column-2 p {
+  margin-bottom: 5vh;
+}
+
+#Notre-entreprise .column-3 {
+  width: 20%;
+  align-items: center;
+  justify-content: center;
+}
+
+#Notre-entreprise .column-3 img {
+  width: 90%;
+  justify-items: center;
+}
+
+/* FOOTER */
+
+#footer {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3vh 0;
+  color: #fff;
+}
+
+#footer a {
+  color: #fff;
+}
+
+#footer a:hover {
+  color: #fff;
+  color: #2f7fc2 !important;
+  border-color: #2f7fc2;
+}
+
+#footer_left {
+  width: 33%;
+  text-align: left;
+  align-items: center;
+}
+
+#footer_logo {
+  width: 110px;
+  margin: 1rem 3rem;
+}
+
+#footer_contacts p {
+  font-size: 0.6rem;
+  line-height: 0.5rem;
+}
+
+#footer_middle {
+  width: 33%;
+  font-size: 0.6rem;
+  justify-content: center;
+}
+
+#footer_middle #social i {
+  font-size: 3rem;
+  margin: 1vh 1vw;
+}
+
+#footer_right {
+  width: 33%;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+
+#footer_right > * {
+  border: solid 1px #fff;
+  padding: 0.5rem;
+  margin: 2rem 0.5rem;
+}
+
+#toggler {
+  opacity: 1;
+  position: fixed;
+  left: 33vw;
+  top: 6vh;
+  z-index: 20;
+  width: 25px;
+  height: 25px;
+  transform: translate(2000px, 2000px);
+  transition: 0.5s;
+}
+
+#toggler::before {
+  content: "";
+  text-align: center;
+  background: url(/img/close.png) center center / 30px no-repeat;
+  height: 150%;
+  width: 150%;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  border-radius: 50%;
+  z-index: 21;
+  cursor: pointer;
+}
+
+#toggler:checked {
+  transform: unset;
+}
+
+#footer #footer_label {
+  display: inline-block;
+}
+
+#footer #footer_label:hover {
+  cursor: pointer;
+  border-color: #2f7fc2;
+  color: #2f7fc2;
+}
+
+#footer #menu {
+  position: fixed;
+  top: 0;
+  left: 30vw;
+  background: url(/img/form.jpg) center center/cover;
+  transform: scale(0);
+  width: 40vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  color: #000;
+  border-radius: 10%;
+  z-index: 11;
+  border: none;
+  color: #fff;
+  transition: 0.5s;
+}
+
+#footer #menu::before {
+  content: "";
+  background: #000;
+  height: 1000%;
+  width: 1000%;
+  opacity: 0.5;
+  position: absolute;
+  border-radius: 10%;
+}
+
+#footer_right .content {
+  z-index: 12;
+}
+
+#footer #menu h2 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+#footer .form-control {
+  margin-top: 40px;
+}
+
+#footer .form-control #name,
+#footer .form-control #email,
+#footer .form-control #phone {
+  padding: 10px 20px;
+  background: #f4f4f4;
+}
+
+#toggler:checked + #menu {
+  transform: scale(1);
+}
+
+/* ----------- PAGE MER DE NORVEGE ---------------- */
+
+.bandeau .content {
+  padding-top: 10vh;
+}
+
+/* .bandeau_image {
+  width: 100%;
+  height: 30vh;
+  margin: 5vh 0;
+} */
+
+.bandeau_image {
+  height: 30vh;
+  margin: 5vh 0;
+  border: solid 2px #333;
+  background: #fff;
+}
+
+.bandeau_image img {
+  width: auto;
+  height: 100%;
+}
+
+/* MEDIA QUERRY */
+
+@media (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+  }
+
+  #navbar a {
+    padding: 5px 3vw;
+  }
+
+  .flex-items {
+    flex-direction: column;
+  }
+
+  .flex-items p {
+    margin-bottom: 3rem;
+  }
+
+  #team_content img {
+    width: 60%;
+  }
+
+  .flex-columns .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
