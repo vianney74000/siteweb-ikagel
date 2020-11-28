@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-178412711-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-178412711-1');
+</script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- pour l'icone dans bare adresse -->
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <!-- J'ai cliqu" sur le copy link tag de font awesome trouvé sur CDNJS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+  <!-- pour l'effet gallerie, on renvoie vers le CSS qu'on a copié sur lightbbox -->
+  <link rel="stylesheet" href="css/lightbox.min.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <!-- important, utilities d'abord comme ca on peut over wright dans le style -->
+  <link rel="stylesheet" href="css/style.css">
+  <title>Ikagel france | Produits hallieutiques pour les grossistes et restaurateurs obtenus directement des pêcheurs</title>
+</head>
+
+<body id="home">
+
+  <header>
+    <div id="navbar" class="navbar">
+      <a href="index.html"class="lien-logo"><div class="logo"></div></a>
+      <nav>
+        <ul class="ul">
+          <li>
+            <a href="index.html#selection">Nos produits</a>
+            <ul class="nested-ul">
+              <li><a href="Exotique-traditionel.html" class="sub-liste"> <div> Exotiques Traditionels</div></a></li>
+              <li><a href="Bretagne-et-poulpe.html" class="sub-liste"><div> Poulpe cuit en Bretagne</div></a></li>
+              <li><a href="mer-de-norvège.html" class="sub-liste"><div> Mer de Norvège</div></a></li>
+            </ul>
+          </li>
+          <li><a href="#cases">Découvrir Ikagel</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/contact.html" class="actif">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<main>
+
+
+  <div class="bateau-background"></div> 
+   <div class="bateau-background2"></div>
+
+  <section id="fiche-produit">
+    <div class="flex-columns">
+      <div class="column column-1"></div>
+      <div class="column column-2">
+        <div class="contenu">
+          <h1 class="mb-10 large-heading">Notre King Crab</h1>
+          <div class="flex-columns">
+            <img src="/img/Mer-de-norvege/crab.jpg" alt="">
+            <div class="propriétés px-2">
+              <h3 class="py-1">Fiche technique</h3>
+              <p>Zone de pêche : Lorem ipsum dolor sit</p>
+              <p>Fourchette de poid : Lorem ipsum dolor sit</p>
+              <p>Valeurs nutritionelles : Lorem ipsum dolor sit </p>
+              <p>Méthode de capture : Lorem ipsum dolor sit</p>
+              <p>Conditionement possible : Lorem ipsum dolor sit</p>
+              <p>Process d'acheminement : Lorem ipsum dolor sit</p>
+              <p>Periode de reproduction : Lorem ipsum dolor sit</p>
+            </div>
+          </div>
+          <div class="fiche-produit_description p-2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum veritatis repellendus eos, harum illo doloribus, consequatur vero dignissimos ex odio hic? Laboriosam ducimus dolorum voluptatem sunt, sint quos, corporis vitae tenetur eligendi dicta minus unde eveniet tempora veniam error architecto laudantium placeat numquam aut nostrum asperiores. Maxime debitis eligendi mollitia voluptas eius molestias provident quos, nulla tenetur aperiam nihil eos, numquam repudiandae quod error aspernatur corrupti voluptatum a perspiciatis, dolores excepturi ipsa autem cum. Illo unde quidem iusto at quibusdam, quasi, repellendus perferendis harum accusantium sint ipsum sed, sapiente dignissimos eius voluptatibus cum ullam animi! Repudiandae aspernatur ullam animi deserunt.</p>
+          </div>
+        </div>
+      </div>
+      <div class="column column-3"></div>
+    </div>
+  </section>
+
+
+</main>
+
+<footer id="footer" class="bg-dark" >
+
+  <div id="footer_left" class="flex-columns">
+    <div id="footer_logo"><img src="/img/logo-footer.png" alt=""></div>
+    <div id="footer_contacts">
+      <h3>Contacts</h3>
+      <p>38 rue du séminaire</p>
+      <p>94550 - CHEVILLY-LARUE - FRANCE</p>
+      <p>+(33) 04-86-92-94</p>
+      <p>Info@ikagel.com</p>
+      <p>Entre 9h-12h30 et 13h30-18h30</p>
+    </div>
+  </div>
+  <div id="footer_middle">
+    <div id="social">
+      <a href="#"> 
+        <i class="fab fa-facebook"></i>  
+      </a>
+      <a href="#"> 
+        <i class="fab fa-linkedin"></i>  
+      </a>
+      <p> Copyright &copy; 2020 Ikagel France </p>
+      <a href="#"> <p> Notre politique de confidentialité</p></a>
+      <a href="#"> <p> Notre politique de traitement des cookies</p></a>
+    </div>
+  </div>
+  <div id="footer_right">
+      <a href="#">Téléchargez notre catalogue</a>
+      <br> <label for="toggler" id="footer_label">Abonnez-vous à notre newsletter</label> 
+      <input type="checkbox" id="toggler">
+      <div id="menu">
+        <div class="content">
+          <h2>Abonnemement à notre Newsletter</h2>
+          <p>Tout les mois, un condensé de toute l'actualité en matière de pêche</p>
+          <form action="process.php" method="POST" id="form">
+            <div class="form-control">
+              <input type="text" id="name" name="name" placeholder="Enter Your Name">
+            </div>
+            <div class="form-control">
+              <input type="email" id="email" name="email" placeholder="Enter Your e-mail">
+            </div>
+            <div class="form-control">
+              <input type="text" id="phone" name="phone" placeholder="Enter Your Phone">
+            </div>
+            <div class="form-control">
+            <input type="submit" id="submit" value="Envoyer" class="btn btn-primary">
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
+
+</footer>
+
+
+<!-- Lightbox -->
+<script src="js/lightbox.min.js"></script>
+
+
+<!-- bare de tache -->
+
+
+
+
+</body>
+</html>

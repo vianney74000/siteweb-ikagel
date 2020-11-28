@@ -20,8 +20,8 @@
 
 .btn-primary,
 .bg-primary {
-  background: rgb(38, 54, 112);
-  color: #fff;
+  background: #2f7fc2 !important;
+  color: #fff !important;
 }
 
 .btn:hover {
@@ -30,8 +30,8 @@
 
 .btn-secondary,
 .bg-secondary {
-  background: #2f7fc2;
-  color: #fff;
+  background: #263670 !important;
+  color: #fff !important;
 }
 
 .btn-dark,
@@ -46,6 +46,21 @@
   color: #333;
 }
 
+.bg-t-primaire {
+  color: #fff;
+  background: rgba(47, 127, 194, 0.5);
+}
+
+.bg-t-secondaire {
+  color: #fff;
+  background: rgba(38, 54, 112, 0.5);
+}
+
+.bg-t-tertiaire {
+  color: #fff;
+  background: rgba(255, 215, 0, 0.5);
+}
+
 .btn-ouline {
   background: transparent !important ;
   color: rgb(0, 192, 198);
@@ -57,7 +72,13 @@
   align-self: center;
   margin: 0 30px;
   height: 4px;
-  background: #2102d0;
+  background: #2f7fc2;
+}
+
+.barre-verticale {
+  height: 100%;
+  width: 2px;
+  background: #000;
 }
 
 /* font and padding */
@@ -89,7 +110,6 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-bottom: 10vh;
   font-weight: bold;
   color: #fff;
 }
@@ -107,7 +127,7 @@
   height: 100%;
 }
 
-/* padding & containers */
+/* padding & containers & margin */
 
 .p-1 {
   padding: 2vh 1vw;
@@ -127,6 +147,23 @@
 .py-3 {
   padding: 6vh 0;
 }
+.px-1 {
+  padding: 0 1vw;
+}
+.px-2 {
+  padding: 0 2vw;
+}
+.px-3 {
+  padding: 0 3vw;
+}
+
+.mb-10 {
+  margin-bottom: 10vh;
+}
+
+.mb-15 {
+  margin-bottom: 15vh;
+}
 
 .container {
   max-width: 90vw;
@@ -135,111 +172,91 @@
   overflow: hidden;
 }
 
-/* GRID */
+/* PRODUITS GRID */
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 4rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10%;
   justify-items: center;
   padding: 2rem;
 }
 
 .grid-item {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   padding: 20px 10px;
-  border-top-left-radius: 10%;
-  border-top-right-radius: 10%;
+  border-radius: 10%;
   background: #f4f4f4;
   position: relative;
   overflow: hidden;
+  transition: 1s;
+}
+
+.grid-item:hover {
+  box-shadow: 1px 1px 10px 15px rgba(266, 266, 266, 0.5);
 }
 
 .grid-item > div:nth-child(1) {
   position: absolute;
   top: 0;
   left: 0;
-  height: 12%;
+  height: 15%;
   width: 100%;
   text-align: center;
   text-justify: center;
-  padding: 5px 0;
+  font-size: 1.5rem;
 }
 
 .grid-item > div:nth-child(2) {
   position: absolute;
-  top: 12%;
+  top: 15%;
   left: 0;
-  height: 88%;
+  height: 85%;
   width: 100%;
 }
 
 .grid-item > div:nth-child(2) img {
   height: 100%;
-  width: auto;
+  width: 100%;
   top: -40px;
 }
 
-.grid-item .hover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: #fff;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 30px;
+.container-deployable {
+  height: 55vh;
+  justify-items: center;
+  align-items: center;
 }
 
-.grid-item .hover * {
-  z-index: 10;
-  transform: scale(0);
-  transition: 0.5s;
-}
-
-.grid-item .hover::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(3, 3, 3, 0.7);
-  transform: scale(0);
-  transition: 0.5s;
-}
-
-.grid-item .hover:hover::before {
-  transform: scale(1);
-}
-
-.grid-item .hover:hover * {
-  transform: scale(1);
-}
-
-.grid-item .hover p {
+.grid-item-deployable {
+  width: 300px;
   text-align: center;
-  font-size: 0.9rem;
-  margin-bottom: 30px;
+  height: 100px;
+  overflow: hidden;
+  transition: 1s;
+  border: 2px solid #fff;
+  border-radius: 10%;
 }
 
-.grid-item .hover ul {
-  text-align: left;
-  font-size: 0.7rem;
+.grid-item-deployable > div {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.grid-item .hover ul li {
-  margin-bottom: 5px;
-  padding-bottom: 5px;
+.grid-item-deployable > img {
+  height: 400px;
+  width: 100%;
+}
+.grid-item-deployable:hover > div {
+  display: none;
 }
 
-.grid-item .hover ul li:last-child {
-  border-bottom: none;
+.grid-item-deployable:hover {
+  height: 400px;
+  width: 400px;
+  /* border-radius: 50%; */
+  border: none;
 }
-
-/* .grid-item img:hover + .hover {
-  display: unset;
-} */

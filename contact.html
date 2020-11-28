@@ -33,16 +33,16 @@
       <nav>
         <ul class="ul">
           <li>
-            <p>Nos produits</p>
+            <a href="index.html#selection">Nos produits</a>
             <ul class="nested-ul">
-              <li><a href="#" class="sub-liste"> <div> Exotiques Traditionels</div></a></li>
-              <li><a href="#" class="sub-liste"><div> Poulpe cuit en Bretagne</div></a></li>
+              <li><a href="Exotique-traditionel.html" class="sub-liste"> <div> Exotiques Traditionels</div></a></li>
+              <li><a href="Bretagne-et-poulpe.html" class="sub-liste"><div> Poulpe cuit en Bretagne</div></a></li>
               <li><a href="mer-de-norvège.html" class="sub-liste"><div> Mer de Norvège</div></a></li>
             </ul>
           </li>
           <li><a href="#cases">Découvrir Ikagel</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/contact.html" class="actif">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -50,22 +50,44 @@
 
 <main>
 
-  <div id="menu">
-    <div class="content">
-      <h2>Abonnemement à notre Newsletter</h2>
-      <p>Tout les mois, un condensé de toute l'actualité en matière de pêche</p>
+  <div id="contact">
+    <div id="contact_content">
+      <h2>Nous contacter</h2>
+      <p>Laissez-nous un message, nous vous répondrons au plus vite !</p>
       <form action="process.php" method="POST" id="form">
         <div class="form-control">
-          <input type="text" id="name" name="name" placeholder="Enter Your Name">
+          <input type="text" id="nom" name="nom" placeholder="Votre Nom">
         </div>
         <div class="form-control">
-          <input type="email" id="email" name="email" placeholder="Enter Your e-mail">
+          <input type="text" id="nom-entreprise" name="nom-entreprise" placeholder="Le nom de votre organisation">
         </div>
         <div class="form-control">
-          <input type="text" id="phone" name="phone" placeholder="Enter Your Phone">
+          <input type="text" id="rôle" name="rôle" placeholder="Votre fonction dans l'organisation">
         </div>
         <div class="form-control">
-        <input type="submit" id="submit" value="send" class="btn btn-primary">
+          <input type="email" id="email" name="email" placeholder="Votre e-mail">
+        </div>
+        <div class="form-control">
+          <input type="tel" id="téléphone" name="téléphone" placeholder="Votre Numéro de Téléphone">
+        </div>
+        <div class="form-control">
+          <label for="activité">Votre activité</label>
+          <select name="activité" id="activité">
+            <option value="restaurateur">Restaurateur</option>
+            <option value="professionel-de-la-grande-distribution">Professionel de la grande distribution</option>
+            <option value="autre" id="autre">Autre
+            </option>
+          </select>
+        </div>
+
+        <div class="form-control">
+          <textarea name="Message" id="message" cols="30" rows="10" placeholder="Votre Message"></textarea>
+        </div>
+        <div>
+          <input type="checkbox" name ="Newsletter" id="newsletter" value="oui" checked> &nbsp; Je souhaite être tenu informé des dernières pêches réalisées en temps réel et des produits disponnibles à la vente
+        </div>
+        <div class="form-control">
+        <input type="submit" id="submit" value="Envoyer" class="btn btn-primary">
         </div>
       </form>
     </div>
@@ -118,7 +140,7 @@
               <input type="text" id="phone" name="phone" placeholder="Enter Your Phone">
             </div>
             <div class="form-control">
-            <input type="submit" id="submit" value="send" class="btn btn-primary">
+            <input type="submit" id="submit" value="Envoyer" class="btn btn-primary">
             </div>
           </form>
         </div>
@@ -133,33 +155,7 @@
 
 
 <!-- bare de tache -->
-<script>
-  const navbar = document.getElementById('navbar');
-    //  on initie une variable. Ca veut dire, on a pas encore commencé à scroll
-  let scrolled = false
 
-  window.onscroll = function() {
-    if(window.pageYOffset >500) {
-      navbar.classList.remove('top');
-      // Condition dans la condition. Si Not Scrolled
-      if(!scrolled) {
-        // On créé du CSS directement dans la fonction - on ajoute Transform qui est du CSS
-        // translate Y moove things along the Y axis
-        // ca dit, quand on atteint les 100px, on envoie la navbar up 70px ce qui la sort de l'écran, donc elle disparait
-        navbar.style.transform = 'translateY(-70px)';
-      }
-      // après 200 milisecondes (para 2) on remet la navbar au bon endroit (para 1)
-      setTimeout(function(){
-        navbar.style.transform = 'translateY(0px)';
-        scrolled = true;
-      } , 200);
-    } else {
-      navbar.classList.add('top');
-      scrolled = false;
-    }
-  }
-
-</script>
 
 
 

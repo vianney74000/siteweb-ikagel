@@ -45,20 +45,15 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(38, 54, 112, 0.503);
+  background: #2f7fc2;
   color: #fff;
-  opacity: 0.8;
   width: 100%;
   height: 70px;
   position: fixed;
   top: 0px;
   padding: 0 5vw;
   transition: 0.25s ease-in;
-  z-index: 1;
-}
-
-.navbar:hover {
-  background: rgba(38, 54, 112, 1);
+  z-index: 2;
 }
 
 .navbar .ul {
@@ -69,7 +64,8 @@ img {
 
 .navbar .ul > li > a {
   color: #fff;
-  padding: 11.5px 20px;
+  padding: 11.5px 15px;
+  margin: 0 5px;
   margin-bottom: 10px;
   display: block;
 }
@@ -84,7 +80,7 @@ img {
 .navbar .nested-ul li a {
   padding: 11.5px 20px;
   display: block;
-  background: rgba(38, 54, 112, 1);
+  background: #2f7fc2;
   width: 230px;
   display: none;
   color: #fff;
@@ -99,8 +95,7 @@ img {
 }
 
 .navbar a:hover,
-/* .navbar p:hover, */
-.navbar .ul > li:nth-child(1):hover p {
+.navbar .ul > li:nth-child(1):hover > a {
   border-bottom: solid 2px #fff;
   cursor: pointer;
 }
@@ -109,9 +104,9 @@ img {
   border: none;
 }
 
-/* .navbar a.sub-liste:hover > div {
+.actif {
   border-bottom: solid 2px #fff;
-} */
+}
 
 .navbar .nested-ul li a:hover {
   color: #000;
@@ -122,10 +117,20 @@ img {
   background: transparent;
 }
 
-a .logo {
+.navbar a .logo {
   width: 120px;
   height: 30px;
   background: url("/img/logo.PNG") center center / cover no-repeat;
+}
+
+.navbar a.lien-logo {
+  padding: 10px 20px;
+  transition: 0.5s;
+}
+
+.navbar a.lien-logo:hover {
+  border: none;
+  box-shadow: 1px 1px 10px 1px #fff;
 }
 
 /* Hero */
@@ -209,7 +214,6 @@ a .logo {
   display: flex;
   text-align: center;
   justify-content: space-evenly;
-  height: 100%;
 }
 
 #selection .box {
@@ -262,12 +266,6 @@ a .logo {
   text-align: center;
 }
 
-/* .flex-items > div:nth-child(2) {
-  width: 35%;
-} */
-
-/* Test transparent */
-
 .encart-transparent {
   height: 40vh;
 }
@@ -291,8 +289,8 @@ a .logo {
 }
 
 #Notre-entreprise .column-1 {
-  background: url(/img/home/Phare.png) center 20px / 200px no-repeat;
-  width: 15%;
+  background: url(/img/home/Phare.png) center 30px / 310px no-repeat;
+  width: 20%;
 }
 
 #Notre-entreprise .column-2 {
@@ -300,7 +298,7 @@ a .logo {
   justify-content: center;
   height: 100%;
   text-align: center;
-  width: 65%;
+  width: 60%;
 }
 
 #Notre-entreprise .column-2 h4 {
@@ -314,13 +312,13 @@ a .logo {
 
 #Notre-entreprise .column-3 {
   width: 20%;
-  align-items: center;
-  justify-content: center;
+  display: flex;
+  align-content: left;
+  justify-content: flex-end;
 }
 
 #Notre-entreprise .column-3 img {
-  width: 90%;
-  justify-items: center;
+  width: 100%;
 }
 
 /* FOOTER */
@@ -501,6 +499,379 @@ a .logo {
 .bandeau_image img {
   width: auto;
   height: 100%;
+}
+
+/* ----------- POULPE ET BRETAGNE--------------- */
+
+/* ------------EXOTIQUE TRADITIONEL ------------- */
+
+/* ----------- CONTACT PAGE ----------------- */
+
+#contact {
+  height: 150vh;
+  display: flex;
+  justify-content: center;
+}
+
+#contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150vh;
+  background: url(/img/contact/fond-ecran-flou.jpg) center center/cover;
+  z-index: -1;
+}
+
+#contact_content {
+  margin: auto;
+  background: rgba(244, 244, 244, 0.7);
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  color: #000;
+  border: none;
+  border-radius: 10%;
+}
+
+#contact #menu h2 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+#contact .form-control {
+  margin-top: 40px;
+}
+
+#contact .form-control > input,
+#contact .form-control > textarea,
+#contact .form-control > select {
+  width: 100%;
+  padding: 10px 20px;
+  background: #f4f4f4;
+  outline-color: #2f7fc2;
+}
+
+/* blog */
+
+#blog {
+  background: #f4f4f4;
+}
+
+.date {
+  display: inline-block;
+  color: #fff;
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  padding: 0.4rem 0.6rem;
+  border-radius: 15px;
+  margin-bottom: 0.5rem;
+}
+
+.date-secondaire {
+  background: #263670;
+}
+.date-primaire {
+  background: #2f7fc2;
+}
+.date-tertiaire {
+  background: orange;
+}
+
+.container {
+  max-width: 70vw;
+  margin: auto;
+  padding: 0 3vw;
+  overflow: hidden;
+}
+
+#showcase {
+  color: #fff;
+  padding: 2vw 2vh;
+  position: relative;
+  background: #333;
+}
+
+#showcase::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/img/blog/article-une.jpg") no-repeat center center/cover;
+  opacity: 0.4;
+}
+
+#showcase .showcase-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+#showcase .showcase-content {
+  z-index: 1;
+}
+
+#showcase .showcase-content p {
+  margin-bottom: 1rem;
+}
+
+#home-article .articles-container {
+  display: grid;
+  grid-template-rows: repeat (4, 400px);
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#home-article .card {
+  padding: 2vh 2vw;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+#home-article .articles-container > *:first-child {
+  grid-column: 1 / span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+#home-article .articles-container > *:nth-child(2) {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+#home-article .articles-container > *:nth-child(3) {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+#home-article .card:nth-child(4) {
+  grid-column: 1;
+  grid-row: 3 / span 2;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 15px;
+}
+#home-article .card:nth-child(5) {
+  grid-column: 2 / span 2;
+  grid-row: 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+}
+
+#home-article .card:nth-child(6) {
+  grid-column: 2 / span 2;
+  grid-row: 4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+}
+
+#article .meta .category {
+  margin-top: 7px;
+}
+
+/* ----- SUB PRODUCT PAGE ---------- */
+
+.sub-product {
+  height: 150vh;
+  display: flex;
+  justify-content: center;
+}
+
+.sub-product_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150vh;
+  z-index: -1;
+}
+
+#sub-product_content {
+  margin: auto;
+  background: rgba(244, 244, 244, 0.8);
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  color: #000;
+  border: none;
+  border-radius: 10%;
+}
+
+#sub-product_content h1 {
+  margin: 5vh 0;
+}
+
+#sub-product_content h2,
+#sub-product_content .btn {
+  margin-top: 5vh;
+}
+
+.grid-4-columns {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.grid-4-columns.container-deployable {
+  height: 30vh;
+  justify-items: center;
+  align-items: center;
+}
+
+.grid-4-columns .grid-item-deployable,
+.grid-4-columns .grid-item-deployable > div {
+  width: 200px;
+  height: 70px;
+}
+
+.grid-4-columns .grid-item-deployable:hover,
+.grid-4-columns .grid-item-deployable:hover > img {
+  height: 200px;
+}
+
+/* ---- fiche produit -------- */
+
+#fiche-produit > div {
+  height: 120vh;
+  color: #000;
+}
+
+#fiche-produit .column-1,
+#fiche-produit .column-3 {
+  width: 15%;
+  height: 100%;
+  background: #fff;
+  background: url(/img/fiches-produit/planche2.jpg) center center/100%;
+}
+
+#fiche-produit .column-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  height: 100%;
+  padding: 15vh 10vh 3vw;
+  background: #f4f4f4;
+}
+
+#fiche-produit .column-2 .contenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+#fiche-produit .column-2 img,
+#fiche-produit .column-2 .propriétés {
+  width: 45%;
+  height: 400px;
+  margin: 2.5%;
+  background: #fff;
+  border-radius: 2%;
+  /* border: solid 2px #000; */
+  /* background: url(/img/fiches-produit/planche3.jpg) center center/50%; */
+  color: #000;
+}
+
+#fiche-produit .column-2 .propriétés h3 {
+  text-align: center;
+}
+
+#fiche-produit .column-2 .fiche-produit_description {
+  background: #fff;
+  margin: 0 2.5%;
+  border-radius: 1%;
+  /* border: solid 2px #000; */
+  /* background: url(/img/fiches-produit/planche3.jpg) center center/20%; */
+  color: #000;
+}
+#fiche-produit .column-2 .fiche-produit_description p {
+  text-shadow: 1px 1px 1px 5px #fff;
+}
+
+.bateau-background {
+  background: url(/img/fiches-produit/bateau-inversé.png) center center/300px
+    no-repeat;
+  position: absolute;
+  top: 5vh;
+  left: 10vw;
+  width: 30vw;
+  height: 30vh;
+}
+.bateau-background2 {
+  background: url(/img/fiches-produit/bateau.png) center center/300px no-repeat;
+  position: absolute;
+  top: 5vh;
+  right: 10vw;
+  width: 30vw;
+  height: 30vh;
+}
+
+/* TEST POUR PAGE PRODUIT SPECIALITE */
+
+.specialite.test {
+  height: 70vh;
+  background: #f4f4f4;
+}
+
+.specialite.test h2 {
+  color: #000;
+}
+
+.specialite.test .flex-columns {
+  align-items: center;
+  justify-content: center;
+}
+
+.specialite.test .flex-item {
+  width: 35%;
+  padding: 20px 5px;
+  height: 430px;
+}
+
+.specialite.test .flex-item > div img:hover {
+  opacity: 0.8;
+}
+
+.specialite.test .flex-item > div {
+  position: relative;
+  height: 100%;
+}
+
+.specialite.test .flex-item > div img {
+  height: 100%;
+}
+
+.specialite.test .flex-item > div > div {
+  position: absolute;
+  bottom: 15px;
+  left: calc(50% - 100px);
+  z-index: 20;
+  background: #f4f4f4;
+  width: 200px;
+  text-align: center;
+  box-shadow: 1px 1px 5px 1px #000;
 }
 
 /* MEDIA QUERRY */
