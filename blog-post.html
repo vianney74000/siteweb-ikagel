@@ -27,6 +27,9 @@
 
 <body id="blog">
 
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v9.0" nonce="Vg1iWc3M"></script>
+
   <header>
     <div id="navbar" class="navbar">
       <a href="index.html"class="lien-logo"><div class="logo"></div></a>
@@ -48,17 +51,30 @@
     </div>
   </header>
 
+<div id="boutons-partage">  
+  <div class="contenu">
+    <p>Vous avez apprécié notre article ?</p>
+    <p>Partagez le !</p>
+  </div>
+  <div class="linkedin-share-button">
+    <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: fr_FR  </script>
+    <script type="IN/Share" data-url="http://127.0.0.1:5501/blog-post.html"></script> 
+  </div>
+  <div class="fb-share-button" data-href="http://127.0.0.1:5501/blog-post.html" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A5501%2Fblog-post.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Partager</a></div>
+</div>
+
+
   <section id="article">
     <div class="container">
       <div class="page-container">
         <article class="card">
-          <img src="img/articles/ent1.jpg" alt="" />
-          <h1 class="l-heading">Lorem ipsum dolor sit amet</h1>
+          <img src="/img/blog/article-une.jpg" alt="" />
+          <h1 class="large-heading">Titre de l'article</h1>
           <div class="meta">
             <small>
-              <i class="fas fa-user"></i> Written By John Doe January 12, 2019
+              <i class="fas fa-user"></i> Rédigé par Anthony Harati
             </small>
-            <div class="category category-ent">Entertainment</div>
+            <div class="date date-primaire">28.11.2020</div>
           </div>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore

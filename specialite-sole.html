@@ -18,7 +18,8 @@
   <!-- J'ai cliqu" sur le copy link tag de font awesome trouvé sur CDNJS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
   <!-- pour l'effet gallerie, on renvoie vers le CSS qu'on a copié sur lightbbox -->
-  <link rel="stylesheet" href="css/lightbox.min.css">
+  <link href="css/lightbox.css" rel="stylesheet" />
+  <link href="css/lightbox.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/utilities.css">
   <!-- important, utilities d'abord comme ca on peut over wright dans le style -->
   <link rel="stylesheet" href="css/style.css">
@@ -33,7 +34,7 @@
       <nav>
         <ul class="ul">
           <li>
-            <a href="index.html#selection">Nos produits</a>
+            <a href="index.html#selection" class="actif">Nos produits</a>
             <ul class="nested-ul">
               <li><a href="Exotique-traditionel.html" class="sub-liste"> <div> Exotiques Traditionels</div></a></li>
               <li><a href="Bretagne-et-poulpe.html" class="sub-liste"><div> Poulpe cuit en Bretagne</div></a></li>
@@ -42,7 +43,7 @@
           </li>
           <li><a href="#cases">Découvrir Ikagel</a></li>
           <li><a href="/blog.html">Blog</a></li>
-          <li><a href="/contact.html" class="actif">Contact</a></li>
+          <li><a href="/contact.html" >Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -61,11 +62,13 @@
         <div class="contenu">
           <h1 class="mb-10 large-heading">Notre Sole Langue</h1>
           <div class="flex-columns">
-            <img src="/img/exotique-traditionel/sole-langue.jpg" alt="">
+            <a href="/img/exotique-traditionel/sole-langue.jpg" data-lightbox="sole">
+              <img src="/img/exotique-traditionel/sole-langue.jpg" alt="">
+            </a> 
             <div class="propriétés px-2">
               <h3 class="py-1">Fiche technique</h3>
               <p>Zone de pêche : Lorem ipsum dolor sit</p>
-              <p>Fourchette de poid : Lorem ipsum dolor sit</p>
+              <p>Fourchette de poids : Lorem ipsum dolor sit</p>
               <p>Valeurs nutritionelles : Lorem ipsum dolor sit </p>
               <p>Méthode de capture : Lorem ipsum dolor sit</p>
               <p>Conditionement possible : Lorem ipsum dolor sit</p>
@@ -141,7 +144,9 @@
 
 
 <!-- Lightbox -->
-<script src="js/lightbox.min.js"></script>
+<script src="JS/lightbox-plus-jquery.js"></script> 
+
+<script src="JS/lightbox-plus-jquery.min.js"></script> 
 
 
 <!-- bare de tache -->

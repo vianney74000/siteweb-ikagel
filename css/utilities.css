@@ -157,6 +157,10 @@
   padding: 0 3vw;
 }
 
+.mb-5 {
+  margin-bottom: 5vh;
+}
+
 .mb-10 {
   margin-bottom: 10vh;
 }
@@ -183,14 +187,18 @@
 }
 
 .grid-item {
-  width: 400px;
-  height: 400px;
+  width: 25vw;
+  height: 25vw;
   padding: 20px 10px;
   border-radius: 10%;
   background: #f4f4f4;
   position: relative;
   overflow: hidden;
   transition: 1s;
+}
+
+.grid-item p {
+  font-size: 1.5vw;
 }
 
 .grid-item:hover {
@@ -223,13 +231,20 @@
 }
 
 .container-deployable {
-  height: 55vh;
   justify-items: center;
   align-items: center;
 }
 
+.container-deployable > div {
+  width: 25vw;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .grid-item-deployable {
-  width: 300px;
+  width: 20vw;
   text-align: center;
   height: 100px;
   overflow: hidden;
@@ -247,7 +262,7 @@
 }
 
 .grid-item-deployable > img {
-  height: 400px;
+  height: 300px;
   width: 100%;
 }
 .grid-item-deployable:hover > div {
@@ -255,8 +270,7 @@
 }
 
 .grid-item-deployable:hover {
-  height: 400px;
-  width: 400px;
-  /* border-radius: 50%; */
+  height: 300px;
+  width: 25vw;
   border: none;
 }

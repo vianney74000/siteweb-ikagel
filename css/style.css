@@ -136,7 +136,7 @@ img {
 /* Hero */
 
 #hero {
-  background: url("../img/home/showcase.jpg") center center/cover no-repeat;
+  background: url("/img/home/background2.jpg") center center/cover no-repeat;
   height: 85vh;
   /* min heigh pour mode paysage toute petites heigh, que ca entre pas le titre dans la navbar */
   min-height: 400px;
@@ -177,7 +177,7 @@ img {
   height: 100%;
   /* RGBA avec 4 chiffres, le dernier est l'opacity */
   /* si on met noir + transparant, ca fait cet effect background */
-  background: rgba(5, 1, 56, 0.1);
+  background: rgba(5, 1, 56, 0.3);
 }
 
 /* tout ce qui est dans hero passera devant hero (normal) et devant le reste (notamment le background transparent que j'ai inséré au dessus) */
@@ -230,36 +230,40 @@ img {
 }
 
 #selection #exotique {
-  background: url(/img/home/MAP-AF.png) center center/200px no-repeat;
+  background: url(/img/home/Pecheur-exo.jpg) center center/cover no-repeat;
   transition: 1s;
-  height: 350px;
-}
-
-#selection #exotique:hover {
-  background: url(/img/home/photo-exo.png) center center/200px no-repeat;
-}
-
-#selection #bretagne {
-  background: url(/img/home/MAP-FR.png) center center/300px no-repeat;
-  transition: 1s;
-  height: 350px;
+  height: 250px;
+  border-radius: 5%;
   margin-top: 5vh;
 }
 
+#selection #exotique:hover {
+  background: url(/img/home/paysage-exo.jpg) center center/cover no-repeat;
+}
+
+#selection #bretagne {
+  background: url(/img/home/pecheur-bretagne.jpg) center center/cover no-repeat;
+  transition: 1s;
+  height: 350px;
+  margin-top: 5vh;
+  border-radius: 2%;
+}
+
 #selection #bretagne:hover {
-  background: url(/img/home/poulpe.png) center center/300px no-repeat;
+  background: url(/img/home/paysage-bretagne.jpeg) center center/cover no-repeat;
 }
 
 #selection #nordique {
-  background: url(/img/home/Map-SCANDI.png) center center/200px no-repeat;
+  background: url(/img/home/pecheur-nord.jpg) center center/cover no-repeat;
   transition: 1s;
   width: 100%;
-  height: 350px;
+  height: 250px;
+  border-radius: 5%;
+  margin-top: 5vh;
 }
 
 #selection #nordique:hover {
-  background: url(/img/home/produit_mer_de_norvège.png) center center/200px
-    no-repeat;
+  background: url(/img/home/paysage-nord.jpeg) center center/cover no-repeat;
 }
 
 #selection_mentra {
@@ -276,9 +280,15 @@ img {
   position: fixed;
   left: 0;
   top: 0;
-  height: 100%;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   z-index: -1;
+}
+
+#photo-background img {
+  height: auto;
+  min-height: 100vh;
+  width: 100vw;
 }
 
 /* notre entreprise */
@@ -288,9 +298,16 @@ img {
   height: 60vh;
 }
 
+#Notre-entreprise .column-1 img {
+  width: 90%;
+  max-height: 60vh;
+}
+
 #Notre-entreprise .column-1 {
-  background: url(/img/home/Phare.png) center 30px / 310px no-repeat;
   width: 20%;
+  display: flex;
+  align-content: left;
+  justify-content: flex-end;
 }
 
 #Notre-entreprise .column-2 {
@@ -480,14 +497,8 @@ img {
 /* ----------- PAGE MER DE NORVEGE ---------------- */
 
 .bandeau .content {
-  padding-top: 10vh;
+  padding-top: 15vh;
 }
-
-/* .bandeau_image {
-  width: 100%;
-  height: 30vh;
-  margin: 5vh 0;
-} */
 
 .bandeau_image {
   height: 30vh;
@@ -508,9 +519,10 @@ img {
 /* ----------- CONTACT PAGE ----------------- */
 
 #contact {
-  height: 150vh;
+  height: 180vh;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 #contact::before {
@@ -519,15 +531,14 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 150vh;
+  height: 180vh;
   background: url(/img/contact/fond-ecran-flou.jpg) center center/cover;
   z-index: -1;
 }
 
 #contact_content {
-  margin: auto;
   background: rgba(244, 244, 244, 0.7);
-  width: 40vw;
+  width: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -569,7 +580,7 @@ img {
   text-transform: uppercase;
   padding: 0.4rem 0.6rem;
   border-radius: 15px;
-  margin-bottom: 0.5rem;
+  margin: 0.25rem 0;
 }
 
 .date-secondaire {
@@ -587,6 +598,14 @@ img {
   margin: auto;
   padding: 0 3vw;
   overflow: hidden;
+}
+
+.card {
+  padding: 2vh 2vw;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  background: #fff;
 }
 
 #showcase {
@@ -628,13 +647,6 @@ img {
   grid-template-rows: repeat (4, 400px);
   grid-gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
-}
-
-#home-article .card {
-  padding: 2vh 2vw;
-  justify-content: center;
-  align-items: center;
-  background: #fff;
 }
 
 #home-article .articles-container > *:first-child {
@@ -686,25 +698,75 @@ img {
   margin-top: 7px;
 }
 
+/* Blog posts */
+
+#article .meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #eee;
+  padding: 0.5rem;
+}
+
+#article .card > img {
+  max-height: 70vh;
+  width: auto;
+  margin: auto;
+  display: block;
+  max-width: 100%;
+}
+
+#boutons-partage {
+  position: fixed;
+  top: 30vh;
+  left: 2vw;
+  width: 12vw;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh 2vw;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+#article h1 {
+  text-align: center;
+  margin-top: 5vh;
+}
+
+#article .card > * {
+  margin-bottom: 5vh;
+}
+
+#boutons-partage > div {
+  margin: 1vh 0;
+}
+
+#boutons-partage > div:nth-child(1) {
+}
+
 /* ----- SUB PRODUCT PAGE ---------- */
 
 .sub-product {
-  height: 150vh;
+  min-height: 150vh;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
-.sub-product_img {
+.sub-product > img {
   position: absolute;
-  top: 0;
+  top: 70px;
   left: 0;
   width: 100%;
-  height: 150vh;
+  height: 100%;
   z-index: -1;
 }
 
 #sub-product_content {
-  margin: auto;
+  margin: 20vh auto;
   background: rgba(244, 244, 244, 0.8);
   width: 70vw;
   display: flex;
@@ -729,40 +791,63 @@ img {
 .grid-4-columns {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-gap: 20px;
 }
 
 .grid-4-columns.container-deployable {
-  height: 30vh;
+  height: unset;
   justify-items: center;
   align-items: center;
 }
 
 .grid-4-columns .grid-item-deployable,
 .grid-4-columns .grid-item-deployable > div {
-  width: 200px;
+  width: 150px;
   height: 70px;
 }
 
 .grid-4-columns .grid-item-deployable:hover,
 .grid-4-columns .grid-item-deployable:hover > img {
-  height: 200px;
+  height: 150px;
+}
+
+.grid-4-columns > div {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ---- fiche produit -------- */
 
 #fiche-produit > div {
-  height: 120vh;
   color: #000;
+  font-size: 1.1vw;
 }
 
-#fiche-produit .column-1,
+.flex-columns {
+  position: relative;
+  justify-content: center;
+}
+
+#fiche-produit .column-1 {
+  position: absolute;
+  width: 15%;
+  height: 100%;
+  background: #fff;
+  background: url(/img/fiches-produit/planche2.jpg) center center/100%;
+  left: 0;
+}
+
 #fiche-produit .column-3 {
   width: 15%;
   height: 100%;
   background: #fff;
   background: url(/img/fiches-produit/planche2.jpg) center center/100%;
+  position: absolute;
+  right: 0;
 }
 
 #fiche-produit .column-2 {
@@ -771,7 +856,7 @@ img {
   align-items: center;
   width: 70%;
   height: 100%;
-  padding: 15vh 10vh 3vw;
+  padding: 15vh 3vw 10vh 3vw;
   background: #f4f4f4;
 }
 
@@ -782,16 +867,21 @@ img {
   height: 100%;
 }
 
-#fiche-produit .column-2 img,
+#fiche-produit .column-2 a,
 #fiche-produit .column-2 .propriétés {
   width: 45%;
-  height: 400px;
+  max-height: 600px;
   margin: 2.5%;
   background: #fff;
   border-radius: 2%;
   /* border: solid 2px #000; */
   /* background: url(/img/fiches-produit/planche3.jpg) center center/50%; */
   color: #000;
+}
+
+#fiche-produit .column-2 a img {
+  width: 100%;
+  height: 100%;
 }
 
 #fiche-produit .column-2 .propriétés h3 {
@@ -842,12 +932,40 @@ img {
 .specialite.test .flex-columns {
   align-items: center;
   justify-content: center;
+  height: 70%;
+  position: relative;
+  overflow: hidden;
 }
 
-.specialite.test .flex-item {
+.specialite.test .flex-columns::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 2%;
+  background: url(/img/exotique-traditionel/algues-gauche.png) center center/7vw
+    no-repeat;
+  height: 120%;
+  width: 10%;
+  z-index: 50;
+  transform: rotate(-25deg);
+}
+.specialite.test .flex-columns::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 88%;
+  background: url(/img/exotique-traditionel/algues-droite.png) center center/7vw
+    no-repeat;
+  height: 120%;
+  width: 10%;
+  z-index: 50;
+  transform: rotate(25deg);
+}
+
+.specialite.test a.flex-item {
   width: 35%;
   padding: 20px 5px;
-  height: 430px;
+  height: 100%;
 }
 
 .specialite.test .flex-item > div img:hover {
@@ -861,6 +979,7 @@ img {
 
 .specialite.test .flex-item > div img {
   height: 100%;
+  width: 100%;
 }
 
 .specialite.test .flex-item > div > div {
