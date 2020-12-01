@@ -75,6 +75,23 @@
   background: #2f7fc2;
 }
 
+.algues-horizontale-droite {
+  background: url(/img/decouvrir-ikagel/algues-tournée-droite.png) center
+    center/cover;
+  height: 60px;
+  flex-grow: 1;
+  background-size: 100% 100%;
+  margin: 0 4vw;
+}
+.algues-horizontale-gauche {
+  background: url(/img/decouvrir-ikagel/algues-tournée-gauche.png) center
+    center/cover;
+  height: 60px;
+  flex-grow: 1;
+  background-size: 100% 100%;
+  margin: 0 4vw;
+}
+
 .barre-verticale {
   height: 100%;
   width: 2px;
@@ -127,6 +144,13 @@
   height: 100%;
 }
 
+.flex-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /* padding & containers & margin */
 
 .p-1 {
@@ -155,6 +179,10 @@
 }
 .px-3 {
   padding: 0 3vw;
+}
+
+.mb-2 {
+  margin-bottom: 2vh;
 }
 
 .mb-5 {

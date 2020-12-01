@@ -109,8 +109,8 @@ img {
 }
 
 .navbar .nested-ul li a:hover {
-  color: #000;
-  text-shadow: 0.1rem 0.1rem 0.8rem steelblue;
+  text-shadow: 0.1rem 0.1rem 1rem #fff;
+  transition: 0.5s;
 }
 
 .navbar.top {
@@ -219,7 +219,7 @@ img {
 #selection .box {
   display: flex;
   flex-direction: column;
-  padding: 5vh 0vh 2vw;
+  padding: 7vh 0vh 2vw;
   width: 25%;
 }
 
@@ -272,6 +272,10 @@ img {
 
 .encart-transparent {
   height: 40vh;
+}
+
+.encart-transparent-small {
+  height: 20vh;
 }
 
 /* photo background */
@@ -636,6 +640,7 @@ img {
 
 #showcase .showcase-content {
   z-index: 1;
+  min-width: 400px;
 }
 
 #showcase .showcase-content p {
@@ -744,7 +749,183 @@ img {
   margin: 1vh 0;
 }
 
-#boutons-partage > div:nth-child(1) {
+/* ----- Decouvrir Ikagel ------- */
+
+#decouvrir-ikagel {
+  overflow-x: hidden;
+}
+
+#notre-activite {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  background: #f4f4f4;
+}
+
+#notre-activite::before {
+  content: "";
+  position: absolute;
+  top: -90px;
+  left: 2%;
+  background: url(/img/exotique-traditionel/algues-gauche.png) center center/7vw
+    no-repeat;
+  height: 120%;
+  width: 10%;
+  z-index: 50;
+  transform: rotate(-25deg);
+}
+#notre-activite::after {
+  content: "";
+  position: absolute;
+  top: -90px;
+  left: 88%;
+  background: url(/img/exotique-traditionel/algues-droite.png) center center/7vw
+    no-repeat;
+  height: 120%;
+  width: 10%;
+  z-index: 50;
+  transform: rotate(25deg);
+}
+
+#notre-activite .flex-row > * {
+  margin-top: 5vh;
+}
+
+#notre-proximite {
+  text-align: center;
+  justify-self: center;
+  padding: 5vh 0 15vh 0;
+  background: #f4f4f4;
+}
+
+#notre-proximite .flex-items > div > h2 {
+  font-size: 1.7rem;
+}
+
+#notre-proximite .grid-container {
+  padding: 5vh 10vw;
+}
+
+#notre-proximite .grid-container > div {
+  justify-self: center;
+  align-self: center;
+}
+
+#notre-proximite .grid-container > div span {
+  font-size: 1.3rem;
+}
+
+#notre-proximite .grid-container > div img {
+  width: 250px;
+}
+
+#notre-histoire {
+  background: #f4f4f4;
+  text-align: center;
+  justify-self: center;
+  padding: 10vh 0 10vh 0;
+}
+
+#notre-histoire .flex-item {
+  padding: 0 3vw;
+  width: 33%;
+}
+
+#notre-histoire .flex-item p {
+  text-align: left;
+}
+
+#notre-histoire .flex-item:nth-child(2) {
+  padding: 0;
+}
+
+#notre-histoire #rope {
+  height: 7vh;
+  background: url(/img/decouvrir-ikagel/rope-17098.png) center center/cover;
+  width: 120%;
+  margin: 10vh auto 0 auto;
+  transform: translateX(-50px);
+}
+
+#rope1 {
+  height: 7vh;
+  background: url(/img/decouvrir-ikagel/rope-17098.png) center center/cover;
+  width: 120%;
+  transform: translate(-50px, -50%);
+}
+#rope2 {
+  height: 7vh;
+  background: url(/img/decouvrir-ikagel/rope-17098.png) center center/cover;
+  width: 120%;
+  transform: translate(-50px, 50%);
+  z-index: 20;
+}
+
+#mot-dirigeant {
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  padding-top: 10vh;
+  border-top: 2px solid #333;
+}
+
+#mot-dirigeant > h2 {
+  padding: 2vh 2vw;
+  background: #f4f4f4;
+  display: inline-block;
+  border-radius: 2%;
+  border: #333 solid 2px;
+}
+
+#mot-dirigeant .line {
+  margin: unset;
+  background: #333;
+  border: none;
+  height: 2px;
+}
+
+#mot-dirigeant .flex-columns > div {
+  width: 50%;
+  margin: 0 4vw 4vw 4vw;
+  font-family: "Catamaran", sans-serif;
+  background: #f4f4f4;
+  padding-top: 2vh;
+  border-radius: 2%;
+  border: #333 solid 1px;
+}
+
+/* 
+#mot-dirigeant .flex-row h3 {
+  margin-top: 8vh;
+} */
+
+#mot-dirigeant .flex-row > * {
+  padding: 2vh 2vw;
+  text-align: center;
+}
+
+#mot-dirigeant .flex-columns .flex-columns > * {
+  padding: 2vh 2vw;
+}
+
+#mot-dirigeant .flex-columns .flex-columns {
+  justify-content: center;
+  align-items: center;
+}
+
+#mot-dirigeant .signature-langlois {
+  width: 10vw;
+}
+
+#mot-dirigeant span {
+  font-size: 2rem;
+  font-family: "Catamaran", sans-serif;
+}
+
+#mot-dirigeant .photo-langlois {
 }
 
 /* ----- SUB PRODUCT PAGE ---------- */
@@ -786,6 +967,10 @@ img {
 #sub-product_content h2,
 #sub-product_content .btn {
   margin-top: 5vh;
+}
+
+#sub-product_content h2 {
+  margin-bottom: 3vh;
 }
 
 .grid-4-columns {
@@ -867,7 +1052,7 @@ img {
   height: 100%;
 }
 
-#fiche-produit .column-2 a,
+#fiche-produit .column-2 .flex-columns > a,
 #fiche-produit .column-2 .propriétés {
   width: 45%;
   max-height: 600px;
@@ -890,7 +1075,7 @@ img {
 
 #fiche-produit .column-2 .fiche-produit_description {
   background: #fff;
-  margin: 0 2.5%;
+  margin: 0 2.5% 5% 2.5%;
   border-radius: 1%;
   /* border: solid 2px #000; */
   /* background: url(/img/fiches-produit/planche3.jpg) center center/20%; */
