@@ -220,11 +220,11 @@ img {
   display: flex;
   flex-direction: column;
   padding: 7vh 0vh 2vw;
-  width: 25%;
+  width: 20vw;
 }
 
 #selection #boxe-2 {
-  width: 40%;
+  width: 35vw;
   padding: 0 2vw;
   font-size: 1.2rem;
 }
@@ -232,7 +232,7 @@ img {
 #selection #exotique {
   background: url(/img/home/Pecheur-exo.jpg) center center/cover no-repeat;
   transition: 1s;
-  height: 250px;
+  height: 20vw;
   border-radius: 5%;
   margin-top: 5vh;
 }
@@ -244,7 +244,7 @@ img {
 #selection #bretagne {
   background: url(/img/home/pecheur-bretagne.jpg) center center/cover no-repeat;
   transition: 1s;
-  height: 350px;
+  height: 25vw;
   margin-top: 5vh;
   border-radius: 2%;
 }
@@ -257,7 +257,7 @@ img {
   background: url(/img/home/pecheur-nord.jpg) center center/cover no-repeat;
   transition: 1s;
   width: 100%;
-  height: 250px;
+  height: 20vw;
   border-radius: 5%;
   margin-top: 5vh;
 }
