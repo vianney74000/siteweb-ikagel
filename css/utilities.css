@@ -106,6 +106,24 @@
   margin: 2vh 0;
 }
 
+.large-heading-noir {
+  font-weight: 200;
+  font-size: 40px;
+  margin: 2vh 0;
+  color: #000;
+}
+
+.large-heading-primaire {
+  font-weight: 200;
+  font-size: 40px;
+  margin: 2vh 0;
+  color: #263670;
+}
+
+.shadow {
+  text-shadow: 1px 1px 10px #000;
+}
+
 .section-padding {
   padding: 12vh 2vw;
 }
@@ -215,8 +233,8 @@
 }
 
 .grid-item {
-  width: 25vw;
-  height: 25vw;
+  width: 22vw;
+  height: 22vw;
   padding: 20px 10px;
   border-radius: 10%;
   background: #f4f4f4;
@@ -226,7 +244,7 @@
 }
 
 .grid-item p {
-  font-size: 1.5vw;
+  font-size: 1.4vw;
 }
 
 .grid-item:hover {

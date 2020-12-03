@@ -48,7 +48,7 @@ img {
   background: #2f7fc2;
   color: #fff;
   width: 100%;
-  height: 70px;
+  height: 80px;
   position: fixed;
   top: 0px;
   padding: 0 5vw;
@@ -66,7 +66,7 @@ img {
   color: #fff;
   padding: 11.5px 15px;
   margin: 0 5px;
-  margin-bottom: 10px;
+  margin: 10px 5px;
   display: block;
 }
 
@@ -75,19 +75,26 @@ img {
   flex-direction: column;
   position: fixed;
   align-items: flex-start;
+  background: #2f7fc2;
 }
 
 .navbar .nested-ul li a {
-  padding: 11.5px 20px;
+  margin: 11.5px 20px;
   display: block;
-  background: #2f7fc2;
-  width: 230px;
+  width: 240px;
   display: none;
   color: #fff;
 }
 
 .navbar li:nth-child(1):hover .nested-ul li a {
   display: block;
+}
+
+.navbar li:nth-child(1):hover .nested-ul li:nth-child(2) a {
+  border-bottom: 1px dotted #fff;
+  border-top: 1px dotted #fff;
+  margin: 0 5px 0 20px;
+  padding: 11.5px 0;
 }
 
 .navbar .sub-liste > div {
@@ -118,8 +125,8 @@ img {
 }
 
 .navbar a .logo {
-  width: 120px;
-  height: 30px;
+  width: 180px;
+  height: 50px;
   background: url("/img/logo.PNG") center center / cover no-repeat;
 }
 
@@ -136,7 +143,7 @@ img {
 /* Hero */
 
 #hero {
-  background: url("/img/home/background2.jpg") center center/cover no-repeat;
+  background: url("/img/home/hero-4.jpg") center center/cover no-repeat;
   height: 85vh;
   /* min heigh pour mode paysage toute petites heigh, que ca entre pas le titre dans la navbar */
   min-height: 400px;
@@ -177,7 +184,7 @@ img {
   height: 100%;
   /* RGBA avec 4 chiffres, le dernier est l'opacity */
   /* si on met noir + transparant, ca fait cet effect background */
-  background: rgba(5, 1, 56, 0.3);
+  background: rgba(5, 1, 56, 0.1);
 }
 
 /* tout ce qui est dans hero passera devant hero (normal) et devant le reste (notamment le background transparent que j'ai inséré au dessus) */
@@ -271,7 +278,7 @@ img {
 }
 
 .encart-transparent {
-  height: 40vh;
+  height: 60vh;
 }
 
 .encart-transparent-small {
@@ -393,8 +400,10 @@ img {
 
 #footer_right {
   width: 33%;
-  margin-top: 1rem;
   font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #footer_right > * {
@@ -887,20 +896,14 @@ img {
   height: 2px;
 }
 
-#mot-dirigeant .flex-columns > div {
+#mot-dirigeant > .flex-columns > div {
   width: 50%;
   margin: 0 4vw 4vw 4vw;
   font-family: "Catamaran", sans-serif;
   background: #f4f4f4;
-  padding-top: 2vh;
   border-radius: 2%;
   border: #333 solid 1px;
 }
-
-/* 
-#mot-dirigeant .flex-row h3 {
-  margin-top: 8vh;
-} */
 
 #mot-dirigeant .flex-row > * {
   padding: 2vh 2vw;
@@ -909,6 +912,7 @@ img {
 
 #mot-dirigeant .flex-columns .flex-columns > * {
   padding: 2vh 2vw;
+  border-radius: 10%;
 }
 
 #mot-dirigeant .flex-columns .flex-columns {
@@ -926,6 +930,7 @@ img {
 }
 
 #mot-dirigeant .photo-langlois {
+  width: 18vw;
 }
 
 /* ----- SUB PRODUCT PAGE ---------- */
@@ -1106,8 +1111,17 @@ img {
 /* TEST POUR PAGE PRODUIT SPECIALITE */
 
 .specialite.test {
-  height: 70vh;
+  /* height: 70 vh; */
   background: #f4f4f4;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.specialite.test .flex-items {
+  width: 100%;
 }
 
 .specialite.test h2 {
@@ -1117,40 +1131,45 @@ img {
 .specialite.test .flex-columns {
   align-items: center;
   justify-content: center;
-  height: 70%;
-  position: relative;
+  height: 50%;
   overflow: hidden;
 }
 
-.specialite.test .flex-columns::before {
+.specialite.test::before {
   content: "";
   position: absolute;
   top: -20px;
-  left: 2%;
+  left: 5%;
   background: url(/img/exotique-traditionel/algues-gauche.png) center center/7vw
     no-repeat;
+  background-size: 7vw 65%;
   height: 120%;
   width: 10%;
   z-index: 50;
   transform: rotate(-25deg);
 }
-.specialite.test .flex-columns::after {
+.specialite.test::after {
   content: "";
   position: absolute;
   top: -20px;
-  left: 88%;
+  left: 85%;
   background: url(/img/exotique-traditionel/algues-droite.png) center center/7vw
     no-repeat;
+  background-size: 7vw 65%;
   height: 120%;
   width: 10%;
   z-index: 50;
   transform: rotate(25deg);
 }
 
-.specialite.test a.flex-item {
+.specialite.test .flex-item {
   width: 35%;
-  padding: 20px 5px;
+  padding: 0 5px;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .specialite.test .flex-item > div img:hover {
@@ -1160,22 +1179,14 @@ img {
 .specialite.test .flex-item > div {
   position: relative;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.specialite.test .flex-item > div img {
-  height: 100%;
-  width: 100%;
-}
-
-.specialite.test .flex-item > div > div {
-  position: absolute;
-  bottom: 15px;
-  left: calc(50% - 100px);
-  z-index: 20;
-  background: #f4f4f4;
-  width: 200px;
-  text-align: center;
-  box-shadow: 1px 1px 5px 1px #000;
+.specialite.test .flex-item img {
+  height: auto;
+  width: 70%;
 }
 
 /* MEDIA QUERRY */

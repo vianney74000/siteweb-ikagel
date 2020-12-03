@@ -35,14 +35,14 @@
       <nav>
         <ul class="ul">
           <li>
-            <a href="#selection">Nos produits</a>
+            <a href="index.html#selection">Nos produits</a>
             <ul class="nested-ul">
               <li><a href="Exotique-traditionel.html" class="sub-liste"> <div> Exotiques Traditionels</div></a></li>
-              <li><a href="Bretagne-et-poulpe.html" class="sub-liste"><div> Poulpe cuit en Bretagne</div></a></li>
+              <li><a href="Bretagne-et-poulpe.html" class="sub-liste"><div> Poulpe cuit et produits Bretons</div></a></li>
               <li><a href="mer-de-norvège.html" class="sub-liste"><div> Mer de Norvège</div></a></li>
             </ul>
           </li>
-          <li><a href="decouvrir-ikagel.html">Découvrir Ikagel</a></li>
+          <li><a href="decouvrir-ikagel.html" class="actif">Découvrir Ikagel</a></li>
           <li><a href="/blog.html">Blog</a></li>
           <li><a href="/contact.html">Contact</a></li>
         </ul>
@@ -136,15 +136,15 @@
   <div class="flex-columns">
     <div class="flex-row">
       <h3><span>"</span> Depuis 20 ans, j'oeuvre à nouer des relations commerciales durables, bâtis sur la confiance et la coopération autour d'un produit de qualité<span>"</span></h3>
-      <img src="img/decouvrir-ikagel/signature papa.PNG" class="signature-langlois" alt="">
+      <img src="img/decouvrir-ikagel/signature-papa.PNG" class="signature-langlois" alt="">
     </div>
     <div>
-      <div>
-        <h3>Christian Langlois</h3>
-      </div>
       <div class="flex-columns">
+      <div>
+        <h3 class="mb-5">Christian Langlois</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, amet. Accusamus veritatis, nam odio, tempore quia, vel reprehenderit officia voluptate quaerat numquam ipsa quidem harum ab? Assumenda a ipsam beatae.</p>
-        <img src="img/decouvrir-ikagel/photos vianney.JPG" class="photo-langlois" alt="">
+      </div>
+      <img src="img/decouvrir-ikagel/photo-dirigeant.JPG" class="photo-langlois" alt="">
       </div>
     </div>
   </div>
@@ -214,33 +214,6 @@
 </script>
 
 
-<!-- bare de tache -->
-<script>
-
-
-  // Smooth scrolling
-  
-  // select liens et btn (en fait on a retiré btn car il s'avère que la même classe est utilisé pour le bouton de la Form et que ce code nullifie l'action par défaut associé au clics sur ces classes, or ca empecherait donc l'action de subission de la form puisque Submit a une classe de btn) - quand on click dessus, active la fonction e
-  $('#navbar a ').on('click', function (e) {
-    if (this.hash !=='') {
-      e.preventDefault();
-
-      const hash = this.hash;
-
-      // si le if est respecter, on annime le html et le body
-      $('html, body').animate(
-        {
-          // on scroll top jusqu'a hash qui est en fait this.hash
-          // les -100 sont pour qu'on arrive un peu au dessus et non en plein dedans - élégance
-          scrollTop: $(hash).offset().top - 100
-        },
-        // le 400 détermine la vitesse à laquelle ca va défiller plus haut plus lent
-        400
-      );
-    }
-  });
-
-</script>
 
 
 
