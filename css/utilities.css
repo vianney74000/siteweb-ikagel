@@ -149,6 +149,16 @@
   color: #fff;
 }
 
+/* encarts */
+
+.encart-transparent {
+  height: 60vh;
+}
+
+.encart-transparent-small {
+  height: 20vh;
+}
+
 /* flex colmuns */
 
 .flex-columns {

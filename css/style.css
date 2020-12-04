@@ -62,12 +62,31 @@ img {
   justify-content: right;
 }
 
-.navbar .ul > li > a {
+.navbar .ul > li > a,
+.navbar .ul > li > label {
   color: #fff;
   padding: 11.5px 15px;
   margin: 0 5px;
   margin: 10px 5px;
   display: block;
+}
+
+.navbar .ul > li:nth-child(2) {
+  display: none;
+}
+
+.navbar .ul #toggler-media {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  transform: translateX(-100vw);
+}
+
+.navbar .ul #toggler-media:checked {
+  transform: translateX(0);
 }
 
 .navbar .nested-ul {
@@ -90,7 +109,12 @@ img {
   display: block;
 }
 
-.navbar li:nth-child(1):hover .nested-ul li:nth-child(2) a {
+.navbar li:nth-child(2) #toggler-media:checked + .nested-ul li a {
+  display: block;
+}
+
+.navbar li:nth-child(1) .nested-ul li:nth-child(2) a,
+.navbar li:nth-child(2) .nested-ul li:nth-child(2) a {
   border-bottom: 1px dotted #fff;
   border-top: 1px dotted #fff;
   margin: 0 5px 0 20px;
@@ -297,7 +321,7 @@ img {
   transition: all 1s ease-in-out;
   width: 100%;
   height: 20vw;
-  border-radius: 5%;
+  border-radius: 2%;
   margin-top: 5vh;
   position: relative;
   opacity: 1;
@@ -314,7 +338,7 @@ img {
   opacity: 1;
   z-index: 1;
   transition: all 0.7s ease-in-out;
-  border-radius: 5%;
+  border-radius: 2%;
 }
 
 #selection #nordique:hover:before {
@@ -323,14 +347,8 @@ img {
 
 #selection_mentra {
   text-align: center;
-}
-
-.encart-transparent {
-  height: 60vh;
-}
-
-.encart-transparent-small {
-  height: 20vh;
+  width: 80%;
+  margin: auto;
 }
 
 /* photo background */
@@ -1384,31 +1402,4 @@ img {
   height: 5vw;
 }
 
-/* MEDIA QUERRY */
-
-@media (max-width: 768px) {
-  #navbar {
-    flex-direction: column;
-  }
-
-  #navbar a {
-    padding: 5px 3vw;
-  }
-
-  .flex-items {
-    flex-direction: column;
-  }
-
-  .flex-items p {
-    margin-bottom: 3rem;
-  }
-
-  #team_content img {
-    width: 60%;
-  }
-
-  .flex-columns .column {
-    flex: 100%;
-    max-width: 100%;
-  }
-}
+/*----------------------------------------------------------- MEDIA QUERRY -------------------------------------------------------------*/
