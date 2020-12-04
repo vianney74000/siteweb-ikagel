@@ -118,7 +118,7 @@ img {
   border-bottom: 1px dotted #fff;
   border-top: 1px dotted #fff;
   margin: 0 5px 0 20px;
-  padding: 11.5px 0;
+  padding: 11.5px 0 !important;
 }
 
 .navbar .sub-liste > div {
