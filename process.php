@@ -11,5 +11,5 @@
     //send email 
     mail($admin_email, "New Form Submission",  $phone, "From:" . $email);
     
-    header('Location: https://nostalgic-dijkstra-b1aab4.netlify.app/decouvrir-ikagel.html');
+    header('decouvrir-ikagel.html');
   }
