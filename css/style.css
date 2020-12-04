@@ -433,7 +433,7 @@ img {
   position: fixed;
   bottom: calc(7vh + 60px);
   right: calc(3vw + 60px);
-  width: 200px;
+  width: 220px;
   height: 135px;
   z-index: 10;
   transform: scale(0);
