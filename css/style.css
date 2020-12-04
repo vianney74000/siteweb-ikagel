@@ -1277,6 +1277,11 @@ img {
   height: 100%;
 }
 
+#fiche-produit .column-2 .contenu h1 {
+  text-align: center;
+  font-size: 3vw;
+}
+
 #fiche-produit .column-2 .contenu > div:nth-child(1) {
   width: 100%;
 }
@@ -1287,7 +1292,7 @@ img {
   > div:nth-child(1)
   .algues-horizontale-gauche {
   margin-right: 0;
-  height: 50px;
+  height: 4vw;
   margin-top: 15px;
 }
 
@@ -1297,7 +1302,7 @@ img {
   > div:nth-child(1)
   .algues-horizontale-droite {
   margin-left: 0;
-  height: 50px;
+  height: 4vw;
   margin-top: 15px;
 }
 
@@ -1306,6 +1311,7 @@ img {
 #fiche-produit .column-2 .propriétés {
   width: 45%;
   max-height: 600px;
+  height: 28vw;
   margin: 2.5%;
   background: #fff;
   border-radius: 2%;
@@ -1321,6 +1327,7 @@ img {
 
 #fiche-produit .column-2 .propriétés h3 {
   text-align: center;
+  padding: 1vw 0 0.3vw 0;
 }
 
 #fiche-produit .column-2 .fiche-produit_description {
