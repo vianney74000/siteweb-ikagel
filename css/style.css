@@ -237,15 +237,31 @@ img {
 }
 
 #selection #exotique {
-  background: url(/img/home/Pecheur-exo.jpg) center center/cover no-repeat;
+  background: url(/img/home/paysage-exo.jpg) center center/cover no-repeat;
   transition: 1s;
   height: 20vw;
-  border-radius: 5%;
+  border-radius: 2%;
   margin-top: 5vh;
+  position: relative;
+  opacity: 1;
 }
 
-#selection #exotique:hover {
-  background: url(/img/home/paysage-exo.jpg) center center/cover no-repeat;
+#selection #exotique:before {
+  content: "";
+  position: absolute;
+  background: url(/img/home/Pecheur-exo.jpg) center center/cover no-repeat;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: 1;
+  transition: all 0.7s ease-in-out;
+  border-radius: 2%;
+}
+
+#selection #exotique:hover:before {
+  opacity: 0;
 }
 
 #selection #bretagne {
@@ -254,23 +270,55 @@ img {
   height: 25vw;
   margin-top: 5vh;
   border-radius: 2%;
+  position: relative;
+  opacity: 1;
 }
 
-#selection #bretagne:hover {
-  background: url(/img/home/pecheur-nord.JPG) center center/cover no-repeat;
+#selection #bretagne:before {
+  content: "";
+  position: absolute;
+  background: url(/img/home/pecheur-bretagne.jpg) center center/cover no-repeat;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: 1;
+  transition: all 0.7s ease-in-out;
+  border-radius: 2%;
+}
+
+#selection #bretagne:hover:before {
+  opacity: 0;
 }
 
 #selection #nordique {
-  background: url(/img/home/pecheur-nord.jpg) center center/cover no-repeat;
-  transition: 1s;
+  background: url(/img/home/paysage-nord.jpeg) center center/cover no-repeat;
+  transition: all 1s ease-in-out;
   width: 100%;
   height: 20vw;
   border-radius: 5%;
   margin-top: 5vh;
+  position: relative;
+  opacity: 1;
 }
 
-#selection #nordique:hover {
-  background: url(/img/home/paysage-nord.jpeg) center center/cover no-repeat;
+#selection #nordique:before {
+  content: "";
+  position: absolute;
+  background: url(/img/home/pecheur-nord.jpg) center center/cover no-repeat;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: 1;
+  transition: all 0.7s ease-in-out;
+  border-radius: 5%;
+}
+
+#selection #nordique:hover:before {
+  opacity: 0;
 }
 
 #selection_mentra {
@@ -347,6 +395,94 @@ img {
 
 #Notre-entreprise .column-3 img {
   width: 100%;
+}
+
+/* poulpito */
+
+#poulpito {
+  position: fixed;
+  bottom: 7vh;
+  right: 3vw;
+  width: 80px;
+  height: 80px;
+  z-index: 10;
+  transform: translatey(200px);
+  animation: animate-1 5s forwards 5s normal ease-in-out;
+  padding: 1px 1px;
+}
+
+#poulpito-bulle {
+  position: fixed;
+  bottom: calc(7vh + 60px);
+  right: calc(3vw + 60px);
+  width: 200px;
+  height: 135px;
+  z-index: 10;
+  transform: scale(0);
+  animation: animate-2 5s forwards 5s normal ease-in-out;
+}
+
+#poulpito-bulle p:nth-child(2) {
+  color: #000;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+#poulpito-bulle p:nth-child(3) {
+  color: #000;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+@keyframes animate-1 {
+  20% {
+    transform: translateY(0);
+    bottom: 7vh;
+    right: 3vw;
+    width: 80px;
+    height: 80px;
+  }
+
+  80% {
+    transform: translateY(0);
+    bottom: 7vh;
+    right: 3vw;
+    width: 80px;
+    height: 80px;
+  }
+
+  100% {
+    width: 50px;
+    height: 50px;
+    bottom: 3.5vh;
+    right: 1.5vw;
+    transform: translateY(0);
+  }
+}
+
+@keyframes animate-2 {
+  20% {
+    transform: scale(0);
+  }
+
+  30% {
+    transform: scale(1);
+  }
+
+  85% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
 }
 
 /* FOOTER */
@@ -526,6 +662,89 @@ img {
 }
 
 /* ----------- POULPE ET BRETAGNE--------------- */
+
+#bretagne-et-poulpe {
+  overflow-x: hidden;
+}
+
+.notre-projet {
+  /* height: 70 vh; */
+  background: #f4f4f4;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.notre-projet .flex-items {
+  width: 100%;
+}
+
+.notre-projet h2 {
+  color: #000;
+}
+
+.notre-projet .flex-columns {
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  overflow: hidden;
+}
+
+.notre-projet::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 5%;
+  background: url(/img/exotique-traditionel/algues-gauche.png) center center/7vw
+    no-repeat;
+  background-size: 7vw 65%;
+  height: 120%;
+  width: 10%;
+  z-index: 50;
+  transform: rotate(-25deg);
+}
+.notre-projet::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 85%;
+  background: url(/img/exotique-traditionel/algues-droite.png) center center/7vw
+    no-repeat;
+  background-size: 7vw 65%;
+  height: 120%;
+  width: 10%;
+  z-index: 50;
+  transform: rotate(25deg);
+}
+
+.notre-projet .flex-item {
+  width: 35%;
+  padding: 0 5px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.notre-projet .flex-item > div img:hover {
+  opacity: 0.8;
+}
+
+.notre-projet .flex-item > div {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notre-projet .flex-item img {
+  height: auto;
+  width: 70%;
+}
 
 /* ------------EXOTIQUE TRADITIONEL ------------- */
 
@@ -930,7 +1149,8 @@ img {
 }
 
 #mot-dirigeant .photo-langlois {
-  width: 18vw;
+  width: 14vw;
+  margin: 1.5vh 0;
 }
 
 /* ----- SUB PRODUCT PAGE ---------- */
@@ -1057,6 +1277,31 @@ img {
   height: 100%;
 }
 
+#fiche-produit .column-2 .contenu > div:nth-child(1) {
+  width: 100%;
+}
+
+#fiche-produit
+  .column-2
+  .contenu
+  > div:nth-child(1)
+  .algues-horizontale-gauche {
+  margin-right: 0;
+  height: 50px;
+  margin-top: 15px;
+}
+
+#fiche-produit
+  .column-2
+  .contenu
+  > div:nth-child(1)
+  .algues-horizontale-droite {
+  margin-left: 0;
+  height: 50px;
+  margin-top: 15px;
+}
+
+#fiche-produit .column-2 .photos-poulpe,
 #fiche-produit .column-2 .flex-columns > a,
 #fiche-produit .column-2 .propriétés {
   width: 45%;
@@ -1108,85 +1353,28 @@ img {
   height: 30vh;
 }
 
-/* TEST POUR PAGE PRODUIT SPECIALITE */
+/* fiche produit poulpe */
 
-.specialite.test {
-  /* height: 70 vh; */
-  background: #f4f4f4;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  align-items: center;
+#fiche-produit .photos-poulpe {
+  display: grid;
+  grid-gap: 10px;
+  padding: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
 
-.specialite.test .flex-items {
-  width: 100%;
+#fiche-produit .photos-poulpe a:nth-child(1) {
+  grid-row: 1 / span3;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
-.specialite.test h2 {
-  color: #000;
-}
-
-.specialite.test .flex-columns {
-  align-items: center;
-  justify-content: center;
-  height: 50%;
-  overflow: hidden;
-}
-
-.specialite.test::before {
-  content: "";
+#poulpito-spe {
   position: absolute;
-  top: -20px;
-  left: 5%;
-  background: url(/img/exotique-traditionel/algues-gauche.png) center center/7vw
-    no-repeat;
-  background-size: 7vw 65%;
-  height: 120%;
-  width: 10%;
-  z-index: 50;
-  transform: rotate(-25deg);
-}
-.specialite.test::after {
-  content: "";
-  position: absolute;
-  top: -20px;
-  left: 85%;
-  background: url(/img/exotique-traditionel/algues-droite.png) center center/7vw
-    no-repeat;
-  background-size: 7vw 65%;
-  height: 120%;
-  width: 10%;
-  z-index: 50;
-  transform: rotate(25deg);
-}
-
-.specialite.test .flex-item {
-  width: 35%;
-  padding: 0 5px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.specialite.test .flex-item > div img:hover {
-  opacity: 0.8;
-}
-
-.specialite.test .flex-item > div {
-  position: relative;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.specialite.test .flex-item img {
-  height: auto;
-  width: 70%;
+  top: 16vh;
+  left: 22vw;
+  width: 5vw;
+  height: 5vw;
 }
 
 /* MEDIA QUERRY */
