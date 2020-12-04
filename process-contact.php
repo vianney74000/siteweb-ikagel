@@ -10,7 +10,8 @@
     $message = $_POST['message'];
     
     //send email
+    // il s'agit d'une fonction a plusieurs parametres facile a deviner
     mail($admin_email, "New Form Submission", $message . ' - ' . $phone, "From:" . $email);
     
-    header('Location: https://nostalgic-dijkstra-b1aab4.netlify.app/success.html');
+    header('Location: http://edgeledger.net/success.html');
   }
