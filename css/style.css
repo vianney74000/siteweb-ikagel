@@ -557,7 +557,6 @@ img {
   width: 25px;
   height: 25px;
   transform: translate(2000px, 2000px);
-  transition: 0.5s;
 }
 
 #toggler::before {
@@ -576,6 +575,7 @@ img {
 
 #toggler:checked {
   transform: unset;
+  transition: 0.5s;
 }
 
 #footer #footer_label {
@@ -606,7 +606,6 @@ img {
   z-index: 11;
   border: none;
   color: #fff;
-  transition: 0.5s;
 }
 
 #footer #menu::before {
@@ -641,6 +640,7 @@ img {
 
 #toggler:checked + #menu {
   transform: scale(1);
+  transition: 0.7s;
 }
 
 /* ----------- PAGE MER DE NORVEGE ---------------- */
