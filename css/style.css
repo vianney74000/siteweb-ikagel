@@ -181,7 +181,7 @@ img {
 /* Hero */
 
 #hero {
-  background: url("/img/home/hero-4.jpg") center center/cover no-repeat;
+  background: url("/img/home/hero-2.jpg") center center/cover no-repeat;
   height: 85vh;
   /* min heigh pour mode paysage toute petites heigh, que ca entre pas le titre dans la navbar */
   min-height: 400px;
