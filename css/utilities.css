@@ -1,3 +1,14 @@
+@font-face {
+  src: url(/font/Quentin.otf);
+  font-family: signature;
+}
+
+@font-face {
+  src: url(/font/Lobster\ 1.4.otf);
+  font-family: titres;
+  font-weight: 600;
+}
+
 /* text colors */
 
 .text-primary {
@@ -255,6 +266,7 @@
 
 .grid-item p {
   font-size: 1.4vw;
+  font-family: titres, sans-serif;
 }
 
 .grid-item:hover {
@@ -293,7 +305,7 @@
 
 .container-deployable > div {
   width: 25vw;
-  height: 300px;
+  height: 25vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -315,10 +327,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px 10px;
 }
 
 .grid-item-deployable > img {
-  height: 300px;
+  height: 25vw;
   width: 100%;
 }
 .grid-item-deployable:hover > div {
@@ -326,7 +339,7 @@
 }
 
 .grid-item-deployable:hover {
-  height: 300px;
+  height: 25vw;
   width: 25vw;
   border: none;
 }

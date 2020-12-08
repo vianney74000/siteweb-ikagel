@@ -1,4 +1,14 @@
-/* un autre moyen d'importer un FONT, plutot que d'inclure le lien dans le HTML, je peux l'importer comme ca dans mon style */
+@font-face {
+  src: url(/font/Quentin.otf);
+  font-family: signature;
+}
+
+@font-face {
+  src: url(/font/Lobster\ 1.4.otf);
+  font-family: titres;
+  font-weight: 600;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
 
 /* BASE STYLES */
@@ -26,9 +36,12 @@ a {
 }
 
 h1,
-h2 {
-  font-weight: 300px;
+h2,
+h3,
+h4 {
+  font-weight: 600px;
   line-height: 1.2;
+  font-family: titres;
 }
 
 p {
@@ -47,6 +60,7 @@ img {
   justify-content: space-between;
   background: #2f7fc2;
   color: #fff;
+  text-shadow: #000 1px 1px 2px;
   width: 100%;
   height: 80px;
   position: fixed;
@@ -192,6 +206,7 @@ img {
   font-size: 40px;
   margin-bottom: 5vh;
   max-width: 1200px;
+  z-index: 1;
 }
 
 /* je vais inséré quelquechose directement en CSS */
@@ -668,15 +683,14 @@ img {
 }
 
 .bandeau_image {
-  height: 30vh;
   margin: 5vh 0;
   border: solid 2px #333;
   background: #fff;
 }
 
 .bandeau_image img {
-  width: auto;
-  height: 100%;
+  width: 35vw;
+  height: auto;
 }
 
 /* ----------- POULPE ET BRETAGNE--------------- */
@@ -686,12 +700,10 @@ img {
 }
 
 .notre-projet {
-  /* height: 70 vh; */
   background: #f4f4f4;
   position: relative;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
 }
 
@@ -769,7 +781,7 @@ img {
 /* ----------- CONTACT PAGE ----------------- */
 
 #contact {
-  height: 180vh;
+  height: 1300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -781,7 +793,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 180vh;
+  height: 1300px;
   background: url(/img/contact/fond-ecran-flou.jpg) center center/cover;
   z-index: -1;
 }
@@ -797,6 +809,7 @@ img {
   color: #000;
   border: none;
   border-radius: 10%;
+  margin-top: 80px;
 }
 
 #contact #menu h2 {
@@ -844,7 +857,7 @@ img {
 }
 
 .container {
-  max-width: 70vw;
+  max-width: 1200pw;
   margin: auto;
   padding: 0 3vw;
   overflow: hidden;
@@ -881,12 +894,12 @@ img {
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 500px;
+  margin-top: 60px;
 }
 
 #showcase .showcase-content {
   z-index: 1;
-  min-width: 400px;
 }
 
 #showcase .showcase-content p {
@@ -900,13 +913,13 @@ img {
   grid-template-columns: repeat(3, 1fr);
 }
 
-#home-article .articles-container > *:first-child {
+#home-article .card:nth-child(6n + 1) {
   grid-column: 1 / span 2;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1rem;
 }
-#home-article .articles-container > *:nth-child(2) {
+#home-article .card:nth-child(6n + 2) {
   grid-column: 3;
   grid-row: 1 / span 2;
   display: grid;
@@ -914,7 +927,7 @@ img {
   grid-gap: 1rem;
 }
 
-#home-article .articles-container > *:nth-child(3) {
+#home-article .card:nth-child(6n + 3) {
   grid-column: 1 / span 2;
   grid-row: 2;
   display: grid;
@@ -922,14 +935,14 @@ img {
   grid-gap: 1rem;
 }
 
-#home-article .card:nth-child(4) {
+#home-article .card:nth-child(6n + 4) {
   grid-column: 1;
   grid-row: 3 / span 2;
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-gap: 15px;
 }
-#home-article .card:nth-child(5) {
+#home-article .card:nth-child(6n + 5) {
   grid-column: 2 / span 2;
   grid-row: 3;
   display: grid;
@@ -937,7 +950,7 @@ img {
   grid-gap: 15px;
 }
 
-#home-article .card:nth-child(6) {
+#home-article .card:nth-child(6n + 6) {
   grid-column: 2 / span 2;
   grid-row: 4;
   display: grid;
@@ -1014,7 +1027,7 @@ img {
 #notre-activite::before {
   content: "";
   position: absolute;
-  top: -90px;
+  top: -120px;
   left: 2%;
   background: url(/img/exotique-traditionel/algues-gauche.png) center center/7vw
     no-repeat;
@@ -1038,6 +1051,10 @@ img {
 
 #notre-activite .flex-row > * {
   margin-top: 5vh;
+}
+
+#notre-activite .container {
+  width: 70vw;
 }
 
 #notre-proximite {
@@ -1158,13 +1175,19 @@ img {
 }
 
 #mot-dirigeant .signature-langlois {
-  width: 10vw;
+  font-size: 2.5rem;
+  font-family: signature;
 }
 
-#mot-dirigeant span {
+#mot-dirigeant .phrase-dirigeant {
+  font-family: signature;
+  font-size: 1.5rem;
+}
+
+/* #mot-dirigeant span {
   font-size: 2rem;
   font-family: "Catamaran", sans-serif;
-}
+} */
 
 #mot-dirigeant .photo-langlois {
   width: 14vw;
@@ -1355,9 +1378,6 @@ img {
   /* border: solid 2px #000; */
   /* background: url(/img/fiches-produit/planche3.jpg) center center/20%; */
   color: #000;
-}
-#fiche-produit .column-2 .fiche-produit_description p {
-  text-shadow: 1px 1px 1px 5px #fff;
 }
 
 .bateau-background {
