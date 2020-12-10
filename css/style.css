@@ -21,6 +21,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+  /* font-family: Helvetica, sans-serif; */
   background: #fff;
   color: #333;
   line-height: 1.6;
@@ -440,7 +441,7 @@ img {
   height: 80px;
   z-index: 10;
   transform: translatey(200px);
-  animation: animate-1 5s forwards 5s normal ease-in-out;
+  animation: animate-1 5s forwards 6s normal ease-in-out;
   padding: 1px 1px;
 }
 
@@ -452,7 +453,7 @@ img {
   height: 135px;
   z-index: 10;
   transform: scale(0);
-  animation: animate-2 5s forwards 5s normal ease-in-out;
+  animation: animate-2 5s forwards 6s normal ease-in-out;
 }
 
 #poulpito-bulle p:nth-child(2) {
