@@ -62,6 +62,16 @@
     height: 80%;
   }
 
+  #selection #bretagne {
+    order: 1;
+  }
+  #selection #exotique {
+    order: 2;
+  }
+  #selection #exotique {
+    order: 3;
+  }
+
   #selection #exotique:hover:before,
   #selection #bretagne:hover:before,
   #selection #nordique:hover:before {

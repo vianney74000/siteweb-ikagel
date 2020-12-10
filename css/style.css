@@ -981,6 +981,10 @@ img {
   max-width: 100%;
 }
 
+#article .container {
+  max-width: 70vw;
+}
+
 #boutons-partage {
   position: fixed;
   top: 30vh;
