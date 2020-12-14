@@ -264,9 +264,16 @@
   transition: 1s;
 }
 
+.grid-item > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .grid-item p {
-  font-size: 1.4vw;
+  font-size: 1.8vw;
   font-family: titres, sans-serif;
+  margin: 0;
 }
 
 .grid-item:hover {

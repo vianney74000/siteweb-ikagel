@@ -182,7 +182,7 @@ img {
 /* Hero */
 
 #hero {
-  background: url("/img/home/hero-2.jpg") center center/cover no-repeat;
+  background: url("/img/home/hero-3.jpg") center center/cover no-repeat;
   height: 85vh;
   /* min heigh pour mode paysage toute petites heigh, que ca entre pas le titre dans la navbar */
   min-height: 400px;
@@ -553,8 +553,8 @@ img {
 }
 
 #footer_contacts p {
-  font-size: 0.6rem;
-  line-height: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 0.9rem;
 }
 
 #footer_middle {
@@ -570,7 +570,6 @@ img {
 
 #footer_right {
   width: 33%;
-  font-size: 0.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -583,6 +582,7 @@ img {
 }
 
 #toggler {
+  -moz-appearance: initial;
   opacity: 1;
   position: fixed;
   left: 33vw;
@@ -591,6 +591,7 @@ img {
   width: 25px;
   height: 25px;
   transform: translate(2000px, 2000px);
+  border-radius: 50%;
 }
 
 #toggler::before {
@@ -605,6 +606,10 @@ img {
   border-radius: 50%;
   z-index: 21;
   cursor: pointer;
+}
+
+#toggler:hover {
+  width: 27px;
 }
 
 #toggler:checked {
@@ -678,6 +683,10 @@ img {
 }
 
 /* ----------- PAGE MER DE NORVEGE ---------------- */
+
+#mer-de-norvège {
+  overflow-x: hidden;
+}
 
 .bandeau .content {
   padding-top: 15vh;
@@ -1245,6 +1254,7 @@ img {
 
 #sub-product_content h1 {
   margin: 5vh 0;
+  font-size: 2rem;
 }
 
 #sub-product_content h2,
