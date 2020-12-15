@@ -1383,8 +1383,6 @@ img {
   margin: 2.5%;
   background: #fff;
   border-radius: 2%;
-  /* border: solid 2px #000; */
-  /* background: url(/img/fiches-produit/planche3.jpg) center center/50%; */
   color: #000;
 }
 
@@ -1402,8 +1400,6 @@ img {
   background: #fff;
   margin: 0 2.5% 5% 2.5%;
   border-radius: 1%;
-  /* border: solid 2px #000; */
-  /* background: url(/img/fiches-produit/planche3.jpg) center center/20%; */
   color: #000;
 }
 
