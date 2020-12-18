@@ -4,7 +4,7 @@
 }
 
 @font-face {
-  src: url(/font/Lobster\ 1.4.otf);
+  src: url(/font/lobster\1.4.otf);
   font-family: titres;
   font-weight: 600;
 }
@@ -319,22 +319,25 @@
 }
 
 .grid-item-deployable {
-  width: 20vw;
+  width: 25vw;
   text-align: center;
-  height: 100px;
+  height: 120px;
   overflow: hidden;
   transition: 1s;
-  border: 2px solid #fff;
+  /* border: 2px solid #fff; */
   border-radius: 10%;
 }
 
 .grid-item-deployable > div {
-  height: 100px;
+  height: 120px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px 10px;
+  background: url(/img/Mer-de-norvege/deployabe-sauvage.png) 70px 2px/300px
+    no-repeat;
+  color: #fff;
 }
 
 .grid-item-deployable > img {
