@@ -4,7 +4,7 @@
 }
 
 @font-face {
-  src: url(/font/lobster\1.4.otf);
+  src: url(/font/Lobster-1.4.otf);
   font-family: titres;
   font-weight: 600;
 }
@@ -443,7 +443,7 @@ img {
   height: 80px;
   z-index: 10;
   transform: translatey(200px);
-  animation: animate-1 5s forwards 6s normal ease-in-out;
+  animation: animate-1 7s forwards 5s normal ease-in-out;
   padding: 1px 1px;
 }
 
@@ -451,25 +451,26 @@ img {
   position: fixed;
   bottom: calc(7vh + 60px);
   right: calc(3vw + 60px);
-  width: 220px;
+  width: 230px;
   height: 135px;
   z-index: 10;
   transform: scale(0);
-  animation: animate-2 5s forwards 6s normal ease-in-out;
+  animation: animate-2 7s forwards 5s normal ease-in-out;
 }
 
 #poulpito-bulle p:nth-child(2) {
   color: #000;
-  font-size: 0.8rem;
+  font-size: 1rem;
   position: absolute;
   top: 3px;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
+  line-height: 140%;
 }
 #poulpito-bulle p:nth-child(3) {
   color: #000;
-  font-size: 0.8rem;
+  font-size: 1rem;
   position: absolute;
   top: 45px;
   left: 50%;
@@ -478,7 +479,7 @@ img {
 }
 
 @keyframes animate-1 {
-  20% {
+  15% {
     transform: translateY(0);
     bottom: 7vh;
     right: 3vw;
@@ -486,7 +487,7 @@ img {
     height: 80px;
   }
 
-  80% {
+  85% {
     transform: translateY(0);
     bottom: 7vh;
     right: 3vw;
@@ -504,15 +505,15 @@ img {
 }
 
 @keyframes animate-2 {
-  20% {
+  10% {
     transform: scale(0);
   }
 
-  30% {
+  20% {
     transform: scale(1);
   }
 
-  85% {
+  90% {
     transform: scale(1);
   }
 
@@ -705,6 +706,24 @@ img {
   height: auto;
 }
 
+#mer-de-norvège
+  .container-deployable
+  > div:nth-child(1)
+  .grid-item-deployable2
+  > div {
+  background: url(/img/Mer-de-norvege/deployable-elevage.png) center center/20vw
+    no-repeat;
+}
+
+#mer-de-norvège
+  .container-deployable
+  > div:nth-child(2)
+  .grid-item-deployable2
+  > div {
+  background: url(/img/Mer-de-norvege/deployable-sauvage.png) center center/20vw
+    no-repeat;
+}
+
 /* ----------- POULPE ET BRETAGNE--------------- */
 
 #bretagne-et-poulpe {
@@ -789,6 +808,15 @@ img {
 }
 
 /* ------------EXOTIQUE TRADITIONEL ------------- */
+
+#exotique-traditionel-page
+  .container-deployable
+  > div:nth-child(2)
+  .grid-item-deployable2
+  > div {
+  background: url(/img/exotique-traditionel/deployable-filet.png) center
+    center/20vw no-repeat;
+}
 
 /* ----------- CONTACT PAGE ----------------- */
 
@@ -1446,5 +1474,3 @@ img {
   width: 5vw;
   height: 5vw;
 }
-
-/*----------------------------------------------------------- MEDIA QUERRY -------------------------------------------------------------*/

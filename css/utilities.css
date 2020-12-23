@@ -236,6 +236,10 @@
   margin-bottom: 15vh;
 }
 
+.mt-5 {
+  margin-top: 5vh;
+}
+
 .container {
   max-width: 90vw;
   margin: auto;
@@ -319,25 +323,22 @@
 }
 
 .grid-item-deployable {
-  width: 25vw;
+  width: 20vw;
   text-align: center;
-  height: 120px;
+  height: 100px;
   overflow: hidden;
   transition: 1s;
-  /* border: 2px solid #fff; */
+  border: 2px solid #fff;
   border-radius: 10%;
 }
 
 .grid-item-deployable > div {
-  height: 120px;
+  height: 100px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px 10px;
-  background: url(/img/Mer-de-norvege/deployabe-sauvage.png) 70px 2px/300px
-    no-repeat;
-  color: #fff;
 }
 
 .grid-item-deployable > img {
@@ -352,4 +353,45 @@
   height: 25vw;
   width: 25vw;
   border: none;
+}
+
+.grid-item-deployable2 {
+  width: 25vw;
+  height: 20vw;
+  position: relative;
+  transition: 1s;
+}
+
+.grid-item-deployable2 > div {
+  width: 25vw;
+  height: 150px;
+
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: 1s;
+}
+
+.grid-item-deployable2 > img {
+  height: 20vw;
+  width: 20vw;
+  transition: 1s;
+  position: absolute;
+  transform: scale(0);
+  border-radius: 5%;
+}
+
+.grid-item-deployable2:hover > img {
+  transform: scale(1);
+  transition: 1s;
+}
+
+.grid-item-deployable2:hover > div {
+  background-size: 0vw !important;
+  transition: 1s;
 }

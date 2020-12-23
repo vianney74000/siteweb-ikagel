@@ -176,6 +176,19 @@
     display: flex;
   }
 
+  .grid-item-deployable2 {
+    width: 40vw;
+  }
+
+  .grid-item-deployable2 > div {
+    width: 40vw;
+    height: 200px;
+    background-size: 30vw !important;
+  }
+  .grid-item-deployable2:hover > img {
+    transform: scale(0);
+  }
+
   .notre-projet .flex-columns {
     flex-direction: column-reverse;
   }
@@ -428,6 +441,16 @@
   .nos-produits .grid-item-deployable > div {
     width: 100%;
     height: 100%;
+  }
+
+  .grid-item-deployable2 {
+    width: 50vw;
+  }
+
+  .grid-item-deployable2 > div {
+    width: 50vw;
+    height: 250px;
+    background-size: 45vw !important;
   }
 
   .notre-projet .flex-items h2 {
