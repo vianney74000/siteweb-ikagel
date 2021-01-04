@@ -818,6 +818,15 @@ img {
     center/20vw no-repeat;
 }
 
+#exotique-traditionel-page
+  .container-deployable
+  > div:nth-child(1)
+  .grid-item-deployable2
+  > div {
+  background: url(/img/exotique-traditionel/deployable-entier.png) center
+    center/20vw no-repeat;
+}
+
 /* ----------- CONTACT PAGE ----------------- */
 
 #contact {
