@@ -104,6 +104,10 @@
     transform: translate(-50%, 10%);
   }
 
+  #bretagne-et-poulpe #photo-background {
+    transform: translate(-25%, 10%);
+  }
+
   #photo-background img {
     width: 100%;
   }
@@ -449,7 +453,7 @@
 
   .grid-item-deployable2 > div {
     width: 50vw;
-    height: 250px;
+    height: 100px;
     background-size: 45vw !important;
   }
 
