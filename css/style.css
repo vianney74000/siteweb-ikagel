@@ -738,6 +738,11 @@ img {
   align-items: center;
 }
 
+.container_notre-projet {
+  width: 75%;
+  margin: auto;
+}
+
 .notre-projet .flex-items {
   width: 100%;
 }
@@ -756,12 +761,12 @@ img {
 .notre-projet::before {
   content: "";
   position: absolute;
-  top: -20px;
+  top: 60px;
   left: 5%;
   background: url(/img/exotique-traditionel/algues-gauche.png) center center/7vw
     no-repeat;
   background-size: 7vw 65%;
-  height: 120%;
+  height: 80%;
   width: 10%;
   z-index: 50;
   transform: rotate(-25deg);
@@ -769,28 +774,29 @@ img {
 .notre-projet::after {
   content: "";
   position: absolute;
-  top: -20px;
+  top: 60px;
   left: 85%;
   background: url(/img/exotique-traditionel/algues-droite.png) center center/7vw
     no-repeat;
   background-size: 7vw 65%;
-  height: 120%;
+  height: 80%;
   width: 10%;
   z-index: 50;
   transform: rotate(25deg);
 }
 
 .notre-projet .flex-item {
-  width: 35%;
+  margin-top: 20px;
+  width: 40%;
   padding: 0 5px;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  text-align: left;
 }
 
-.notre-projet .flex-item > div img:hover {
+.notre-projet .flex-item > div a:hover {
   opacity: 0.8;
 }
 
@@ -802,7 +808,7 @@ img {
   align-items: center;
 }
 
-.notre-projet .flex-item img {
+.notre-projet .flex-item a {
   height: auto;
   width: 70%;
 }
@@ -1067,14 +1073,19 @@ img {
   overflow-x: hidden;
 }
 
+#decouvrir-ikagel h2 {
+  font-size: 2rem;
+}
+
 #notre-activite {
-  height: 80vh;
+  /* height: 80vh; */
   display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
   text-align: center;
   background: #f4f4f4;
+  padding: 80px 0;
 }
 
 #notre-activite::before {
@@ -1092,7 +1103,7 @@ img {
 #notre-activite::after {
   content: "";
   position: absolute;
-  top: -90px;
+  top: -120px;
   left: 88%;
   background: url(/img/exotique-traditionel/algues-droite.png) center center/7vw
     no-repeat;
@@ -1117,10 +1128,6 @@ img {
   background: #f4f4f4;
 }
 
-#notre-proximite .flex-items > div > h2 {
-  font-size: 1.7rem;
-}
-
 #notre-proximite .grid-container {
   padding: 5vh 10vw;
 }
@@ -1128,10 +1135,6 @@ img {
 #notre-proximite .grid-container > div {
   justify-self: center;
   align-self: center;
-}
-
-#notre-proximite .grid-container > div span {
-  font-size: 1.3rem;
 }
 
 #notre-proximite .grid-container .pirogue {
@@ -1153,17 +1156,15 @@ img {
   padding: 10vh 0 10vh 0;
 }
 
-#notre-histoire .flex-item {
+#notre-histoire .flex-item:nth-child(1) {
   padding: 0 3vw;
   width: 33%;
 }
-
-#notre-histoire .flex-item p {
-  text-align: left;
-}
-
 #notre-histoire .flex-item:nth-child(2) {
-  padding: 0;
+  width: 60%;
+  margin: 0 50px;
+  text-align: justify !important;
+  text-justify: inter-word !important;
 }
 
 #notre-histoire .flex-item:nth-child(1) {
@@ -1174,7 +1175,7 @@ img {
   background: url(/img/decouvrir-ikagel/ponton.png) center center no-repeat;
   background-size: auto 100%;
   position: absolute;
-  height: 120%;
+  height: 100%;
   width: 100%;
 }
 

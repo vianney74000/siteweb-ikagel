@@ -155,6 +155,72 @@
     grid-gap: 1rem;
   }
 
+  /* Decouvrir Ikagel */
+
+  #decouvrir-ikagel main {
+    overflow-x: hidden;
+  }
+
+  #decouvrir-ikagel h2 {
+    font-size: 1.7rem;
+  }
+
+  #notre-activite {
+    padding-top: 150px;
+    /* height: 850px; */
+  }
+  #notre-activite .container {
+    margin: unset;
+  }
+  #notre-activite::before,
+  #notre-activite::after {
+    display: none;
+  }
+  #notre-activite .container {
+    width: 85vw;
+  }
+
+  #notre-proximite {
+    padding-bottom: 5vh;
+  }
+
+  #notre-proximite .line {
+    display: none;
+  }
+  #notre-proximite > div:first-child {
+    margin-bottom: 0;
+  }
+
+  #notre-histoire {
+    padding: 5vh 0;
+  }
+  #notre-histoire .flex-items {
+    margin-bottom: 5vh;
+  }
+
+  #notre-histoire .flex-columns {
+    display: block;
+  }
+  #notre-histoie .ponton {
+    display: none;
+  }
+
+  #notre-histoire .flex-columns .flex-item:nth-child(2) {
+    width: 85%;
+  }
+
+  #mot-dirigeant {
+    padding-top: 5vh;
+  }
+  #mot-dirigeant h2 {
+    margin-bottom: 5vh;
+  }
+  #mot-dirigeant > .flex-columns > div {
+  }
+  #mot-dirigeant .photo-langlois {
+    width: 20vw;
+  }
+
   /* Page Produit intermédiaire + IKEJIME*/
 
   #bretagne-et-poulpe main {
@@ -193,6 +259,10 @@
     transform: scale(0);
   }
 
+  .notre-projet {
+    overflow-x: hidden;
+  }
+
   .notre-projet .flex-columns {
     flex-direction: column-reverse;
   }
@@ -207,8 +277,8 @@
 
   .notre-projet::before,
   .notre-projet::after {
-    height: 50%;
-    top: 60px;
+    height: 40%;
+    top: 400px;
   }
 }
 
@@ -405,6 +475,47 @@
     background: #263670 !important;
   }
 
+  /* Decouvrir Ikagel */
+
+  #notre-proximite h2 {
+    margin: 0 20px;
+  }
+  #notre-proximite .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 0;
+    justify-items: center;
+    padding: 2rem;
+  }
+  #notre-proximite .grid-container > * {
+    width: 70vw !important;
+    margin-top: 30px;
+  }
+
+  #notre-proximite .grid-container > div:nth-child(4) {
+    grid-row-start: 3;
+  }
+
+  #notre-proximite .pirogue {
+    width: 70% !important;
+  }
+
+  #notre-histoire .algues-horizontale-droite,
+  #notre-histoire .algues-horizontale-gauche {
+    display: none;
+  }
+
+  #notre-histoire .flex-columns .flex-item:nth-child(2) {
+    width: 70%;
+  }
+
+  #mot-dirigeant > .flex-columns {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #mot-dirigeant > .flex-columns > div {
+    width: 90%;
+  }
   /* Page Produit intermédiaire + IKEJIME*/
 
   .bandeau_image img {

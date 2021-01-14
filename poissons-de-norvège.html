@@ -13,7 +13,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
-  <link rel="stylesheet" href="css/lightbox.min.css">
+  <link href="css/lightbox.css" rel="stylesheet" />
+  <link href="css/lightbox.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/utilities.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
@@ -33,20 +34,20 @@
       <nav>
         <ul class="ul">
           <li>
-            <a href="index.html#selection"class="actif">Nos produits</a>
+            <a href="index.html#selection" class="actif">Nos produits</a>
             <ul class="nested-ul">
-              <li><a href="Exotique-traditionel.html" class="sub-liste"> <div> Exotiques Traditionels</div></a></li>
+              <li><a href="poissons-du-senegal.html" class="sub-liste"> <div> Poissons du Sénégal</div></a></li>
               <li><a href="Bretagne-et-poulpe.html" class="sub-liste"><div> Poulpe cuit et produits Bretons</div></a></li>
-              <li><a href="mer-de-norvège.html" class="sub-liste"><div> Mer de Norvège</div></a></li>
+              <li><a href="poissons-de-norvège.html" class="sub-liste"><div> Poissons de Norvège</div></a></li>
             </ul>
           </li>
           <li>
             <label for="toggler-media" id="nos-produits-media" class="actif">Nos produits</label> 
             <input type="checkbox" id="toggler-media">
             <ul class="nested-ul">
-              <li><a href="Exotique-traditionel.html" class="sub-liste"> <div> Exotiques Traditionels</div></a></li>
+              <li><a href="poissons-du-senegal.html" class="sub-liste"> <div> Poissons du Sénégal</div></a></li>
               <li><a href="Bretagne-et-poulpe.html" class="sub-liste"><div> Poulpe cuit et produits Bretons</div></a></li>
-              <li><a href="mer-de-norvège.html" class="sub-liste"><div> Mer de Norvège</div></a></li>
+              <li><a href="poissons-de-norvège.html" class="sub-liste"><div> Poissons de Norvège</div></a></li>
             </ul>           
           </li>
           <li><a href="decouvrir-ikagel.html">Découvrir Ikagel</a></li>
@@ -98,16 +99,16 @@
           <h2 class="large-heading shadow">Découvrez nos spécialités</h2>
         </div>
         <div class="grid-container">
-          <a href="specialite-aiglefin.html" class="grid-item" id="gride-item-1">
-            <div><p>Aiglefin</p></div>
+          <a href="specialite-saumon.html" class="grid-item" id="gride-item-1">
+            <div><p>Filet de saumon désarété</p></div>
             <div>
-              <img src="/img/Mer-de-norvege/aiglefin.jpeg" alt="">
+              <img src="/img/Mer-de-norvege/saumon-filet.jpg" alt="Saumon de Norvège">
             </div>
           </a>
           <a href="specialite-cabillaud.html" class="grid-item" id="gride-item-2">
-            <div><p>Cabillaud</p></div>
+            <div><p>Filet de Cabillaud avec Peau</p></div>
             <div>
-              <img src="img/Mer-de-norvege/cabillaud.jpeg" alt="">
+              <img src="img/Mer-de-norvege/Dos-cabillaud-avec-peau.jpg" alt="Filet de Cabillaud">
             </div>
           </a>
         </div>  
@@ -123,18 +124,33 @@
         </div> 
         <hr class="line">
       </div>
-      <div class="flex-columns mb-5">
-        <div class="flex-item">
-          <p>
-            Le skrei est un cabillaud de l'Arctique norvégien qui est réputé pour sa viande faible en matière grasse ainsi que son goût distinct et savoureux. Il est reconnu comme ayant la plus haute valeur nutritionnelle de tous les cabillauds.
-            <br>
-            Chaque année, entre janvier et avril, le littoral norvégien s'anime pour la très attendue saison du skrei. Ces millions de poissons quittent ainsi les eaux de la banquises et deviennent accéssibles à la pêche pour seulement quelques mois.
-          </p>
-        </div>
+      <div class="container_notre-projet">
+        <p>
+          Chaque hiver, un rituel étonnant se produit dans les eaux pures au nord du cercle polaire arctique. Entre Janvier et Avril, Le cabillaud de la Mer de Barents migre vers les iles Lofoten et Vesteralen pour se reproduire au Nord de la Norvège.
+          Ce long trajet, associé à un régime alimentaire riche, confère à ce cabillaud migrateur, une chair plus ferme, plus blanche et plus onctueuse que celle d’un cabillaud commun sédentaire
+          Parmi ces poissons d’exception, les plus beaux spécimens seront retenus pour arborer le label SKREI dont les critères d’obtention sont très draconiens. Parmi ces critères, on peut noter :
+        </p>
+      
+        <div class="flex-columns mb-5">
           <div class="flex-item">
-            <img src="/img/Mer-de-norvege/skrei.jpg" alt="">
+            <p>
+              - Un poisson d’apparence parfaite, sorti vivant de la mer et conditionné le jour de la pêche <br>
+              - Une chaine du froid totalement maitrisée <br>
+              - Une durée maximale de 12 heures entre la pêche et le conditionnement <br>
+              - Une traçabilité totale (Zone de pêche, nom du bateau, heure de réception dans l’unité d’emballage…) <br>
+              Le SKREI est généralement vendu entier vidé et sans tête. Un pins sur la nageoire dorsale, permet d’identifier la qualité SKREI (mettre une photo du pin’s)
+
+            </p>
           </div>
-      </div>
+          <div class="flex-item">
+            <a href="img/Mer-de-norvege/skrei.jpg"
+            data-lightbox="produit"
+            data-title="Skrei">
+              <img src="img/Mer-de-norvege/skrei.jpg" alt="Skrei">
+            </a>
+          </div>
+        </div>
+     </div>
       <h3 class="mb-5">Bientôt en vente !</h3>
       <a href="contact.html" class="btn btn-primary mb-10">Nous contacter pour en savoir plus</a>
     </section>  
@@ -195,8 +211,9 @@
 </footer>
 
 
-<!-- Lightbox -->
-<script src="js/lightbox.min.js"></script>
+<script src="JS/lightbox-plus-jquery.js"></script> 
+
+<script src="JS/lightbox-plus-jquery.min.js"></script>
 
 
 <!-- bare de tache -->
