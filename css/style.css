@@ -1073,6 +1073,11 @@ img {
   overflow-x: hidden;
 }
 
+#decouvrir-ikagel h1 {
+  padding: 10px 20px;
+  font-size: 3rem;
+}
+
 #decouvrir-ikagel h2 {
   font-size: 2rem;
 }
@@ -1091,7 +1096,7 @@ img {
 #notre-activite::before {
   content: "";
   position: absolute;
-  top: -120px;
+  top: -50px;
   left: 2%;
   background: url(/img/exotique-traditionel/algues-gauche.png) center center/7vw
     no-repeat;
@@ -1103,7 +1108,7 @@ img {
 #notre-activite::after {
   content: "";
   position: absolute;
-  top: -120px;
+  top: -50px;
   left: 88%;
   background: url(/img/exotique-traditionel/algues-droite.png) center center/7vw
     no-repeat;
@@ -1191,6 +1196,13 @@ img {
   width: 120%;
   transform: translate(-50px, 50%);
   z-index: 20;
+}
+#rope3 {
+  height: 7vh;
+  background: url(/img/decouvrir-ikagel/rope-17098.png) center center/370px
+    no-repeat;
+  width: 450px;
+  transform: translateY(-80px);
 }
 
 #mot-dirigeant {
@@ -1468,11 +1480,17 @@ img {
   grid-gap: 10px;
   padding: 10px;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: 19vw !important;
+}
+
+#fiche-produit .photos-poulpe + div {
+  height: 19vw !important;
 }
 
 #fiche-produit .photos-poulpe a:nth-child(1) {
-  grid-row: 1 / span3;
+  grid-row-start: 1;
+  grid-row-end: 3;
   grid-column-start: 1;
   grid-column-end: 3;
 }
@@ -1483,4 +1501,33 @@ img {
   left: 22vw;
   width: 5vw;
   height: 5vw;
+}
+
+#poulpe-cuit .conditionnements {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 0 1.5%;
+  margin-bottom: 30px;
+}
+
+#poulpe-cuit .conditionement {
+  width: 33%;
+  margin: 0 1%;
+  padding: 10px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#poulpe-cuit .conditionement h4 {
+  text-align: center;
+}
+
+#poulpe-cuit .conditionement a img {
+  width: 100%;
+  height: auto;
+  align-self: flex-end;
+  justify-self: flex-end;
 }

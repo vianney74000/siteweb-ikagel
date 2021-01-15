@@ -584,4 +584,20 @@
   .notre-projet::after {
     display: none;
   }
+
+  /* Pages spécialités */
+
+  #fiche-produit * {
+    font-size: 0.8rem;
+  }
+  #fiche-produit h1 #fiche-produit > .flex-columns {
+    display: block;
+  }
+  #fiche-produit > .flex-columns > .column-1,
+  #fiche-produit > .flex-columns > .column-3 {
+    display: none;
+  }
+  #fiche-produit > .flex-columns > .column-2 {
+    width: 100vw;
+  }
 }
