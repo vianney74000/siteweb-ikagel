@@ -368,7 +368,7 @@
     background: url(/img/home/Phare.png) center center/cover;
     bottom: 0;
     left: 0;
-    height: 50%;
+    height: 60%;
     width: 20%;
     z-index: 1;
   }
@@ -378,7 +378,7 @@
     background: url(/img/home/mouette.png) center center/cover;
     bottom: 0;
     right: 0;
-    height: 50%;
+    height: 60%;
     width: 20%;
     z-index: 1;
   }
@@ -476,6 +476,9 @@
 
   /* Decouvrir Ikagel */
 
+  #decouvrir-ikagel #rope3 {
+    display: none;
+  }
   #notre-proximite h2 {
     margin: 0 20px;
   }
@@ -653,6 +656,13 @@
   }
   /* fiche poulpe */
 
+  #poulpe-cuit h1 {
+    margin: 25px 0;
+  }
+  #poulpe-cuit .photos-poulpe,
+  #poulpe-cuit .photos-poulpe + div {
+    height: unset !important;
+  }
   #poulpe-cuit .conditionnements {
     flex-direction: column !important;
   }
