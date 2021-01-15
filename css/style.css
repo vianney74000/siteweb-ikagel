@@ -1460,24 +1460,6 @@ h3 {
   color: #000;
 }
 
-.bateau-background {
-  background: url(/img/fiches-produit/bateau-inversé.png) center center/300px
-    no-repeat;
-  position: absolute;
-  top: 5vh;
-  left: 10vw;
-  width: 30vw;
-  height: 30vh;
-}
-.bateau-background2 {
-  background: url(/img/fiches-produit/bateau.png) center center/300px no-repeat;
-  position: absolute;
-  top: 5vh;
-  right: 10vw;
-  width: 30vw;
-  height: 30vh;
-}
-
 /* fiche produit poulpe */
 
 #fiche-produit .photos-poulpe {
@@ -1516,7 +1498,7 @@ h3 {
   margin-bottom: 30px;
 }
 
-#poulpe-cuit .conditionement {
+#poulpe-cuit .conditionnement {
   width: 33%;
   margin: 0 1%;
   padding: 10px;
@@ -1526,11 +1508,11 @@ h3 {
   justify-content: space-around;
 }
 
-#poulpe-cuit .conditionement h4 {
+#poulpe-cuit .conditionnement h4 {
   text-align: center;
 }
 
-#poulpe-cuit .conditionement a img {
+#poulpe-cuit .conditionnement a img {
   width: 100%;
   height: auto;
   align-self: flex-end;

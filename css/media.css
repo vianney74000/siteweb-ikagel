@@ -586,8 +586,27 @@
 
   /* Pages spécialités */
 
-  #fiche-produit * {
+  #fiche-produit p,
+  #fiche-produit a {
     font-size: 0.8rem;
+  }
+  #fiche-produit h1 {
+    font-size: 2rem !important;
+  }
+  #fiche-produit h3,
+  #fiche-produit h2 {
+    font-size: 1.5rem !important;
+  }
+  #fiche-produit h4 {
+    font-size: 1.2rem;
+  }
+
+  #fiche-produit .contenu > .flex-items {
+    margin: 30px 0;
+  }
+  #fiche-produit .algues-horizontale-droite,
+  #fiche-produit .algues-horizontale-gauche {
+    display: none;
   }
   #fiche-produit h1 #fiche-produit > .flex-columns {
     display: block;
@@ -598,5 +617,51 @@
   }
   #fiche-produit > .flex-columns > .column-2 {
     width: 100vw;
+  }
+  #fiche-produit > .flex-columns .flex-columns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #fiche-produit > .flex-columns .flex-columns > * {
+    width: 95% !important;
+    height: unset;
+  }
+
+  #fiche-produit > .flex-columns .flex-columns > * > p {
+    margin: 0;
+  }
+
+  #fiche-produit > .flex-columns .flex-columns > a {
+    justify-self: center;
+    align-self: center;
+    margin: auto;
+    height: unset;
+  }
+  #fiche-produit > .flex-columns .flex-columns > a > img {
+    width: 100%;
+    height: auto;
+  }
+  #fiche-produit .propriétés {
+    padding-bottom: 20px;
+  }
+
+  #fiche-produit .column-2 .fiche-produit_description {
+    padding: 10px;
+  }
+  /* fiche poulpe */
+
+  #poulpe-cuit .conditionnements {
+    flex-direction: column !important;
+  }
+  #poulpe-cuit .conditionnement {
+    width: 95%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
   }
 }
