@@ -201,20 +201,14 @@
 <!-- bare de tache -->
 <script>
   const navbar = document.getElementById('navbar');
-    //  on initie une variable. Ca veut dire, on a pas encore commencé à scroll
   let scrolled = false
 
   window.onscroll = function() {
     if(window.pageYOffset >500) {
       navbar.classList.remove('top');
-      // Condition dans la condition. Si Not Scrolled
       if(!scrolled) {
-        // On créé du CSS directement dans la fonction - on ajoute Transform qui est du CSS
-        // translate Y moove things along the Y axis
-        // ca dit, quand on atteint les 100px, on envoie la navbar up 70px ce qui la sort de l'écran, donc elle disparait
         navbar.style.transform = 'translateY(-70px)';
       }
-      // après 200 milisecondes (para 2) on remet la navbar au bon endroit (para 1)
       setTimeout(function(){
         navbar.style.transform = 'translateY(0px)';
         scrolled = true;
@@ -227,21 +221,15 @@
 
   // Smooth scrolling
   
-  // select liens et btn (en fait on a retiré btn car il s'avère que la même classe est utilisé pour le bouton de la Form et que ce code nullifie l'action par défaut associé au clics sur ces classes, or ca empecherait donc l'action de subission de la form puisque Submit a une classe de btn) - quand on click dessus, active la fonction e
   $('#navbar a ').on('click', function (e) {
     if (this.hash !=='') {
       e.preventDefault();
 
       const hash = this.hash;
-
-      // si le if est respecter, on annime le html et le body
       $('html, body').animate(
         {
-          // on scroll top jusqu'a hash qui est en fait this.hash
-          // les -100 sont pour qu'on arrive un peu au dessus et non en plein dedans - élégance
           scrollTop: $(hash).offset().top - 100
         },
-        // le 400 détermine la vitesse à laquelle ca va défiller plus haut plus lent
         400
       );
     }

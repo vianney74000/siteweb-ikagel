@@ -6,7 +6,6 @@
   #navbar {
     flex-direction: column;
     height: unset;
-    z-index: 12;
   }
 
   #navbar .logo {
@@ -110,6 +109,18 @@
 
   #photo-background img {
     width: 100%;
+  }
+
+  /* footer */
+
+  #footer #menu {
+    width: 80vw;
+    left: 10vw;
+    height: 80vh;
+  }
+
+  #footer #toggler {
+    left: 15vw;
   }
 
   /* PAGE CONTACT */
@@ -279,6 +290,37 @@
     height: 40%;
     top: 400px;
   }
+
+  /* Sub-product page */
+
+  #sub-product_content {
+    width: 90vw;
+  }
+
+  .sub-product .grid-item-deployable {
+    height: calc(15vw + 35px);
+    width: 20vw;
+  }
+
+  .sub-product .grid-item-deployable > div {
+    height: 35px;
+  }
+  .grid-item-deployable > img {
+    height: 15vw;
+  }
+
+  .grid-4-columns > div {
+    line-height: 15px;
+  }
+
+  .grid-4-columns {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 10px;
+    width: 110%;
+  }
+  #sub-product_content div + p {
+    margin-top: 30px;
+  }
 }
 
 /* -----------  SMARTPHONE ------------ */
@@ -388,6 +430,8 @@
     margin-bottom: 4vh;
   }
 
+  /* footer */
+
   #footer {
     flex-direction: column;
   }
@@ -414,6 +458,26 @@
 
   #footer_middle #social i {
     margin: 2vh 5vw;
+  }
+
+  #footer #footer_right #menu {
+    width: 90vw;
+    left: 3vw;
+  }
+
+  #footer #footer_right #menu h2 {
+    font-size: 1.5rem;
+    margin-bottom: 4vh;
+  }
+
+  #footer #footer_right #toggler {
+    width: 15px;
+    height: 15px;
+    left: 10vw;
+  }
+
+  #footer #footer_right #toggler::before {
+    background-size: 20px;
   }
 
   /* PAGE CONTACT */
@@ -680,5 +744,28 @@
   }
   #poulpe-cuit h2 {
     margin: 2vh 0;
+  }
+  /* sub-product page */
+
+  .sub-product > img {
+    display: none;
+  }
+  #sub-product_content {
+    width: 100%;
+    padding: 20px;
+    margin: unset;
+    margin-top: 120px;
+    border-radius: unset;
+  }
+  .sub-product .grid-item-deployable {
+    height: calc(25vw + 35px);
+    width: 30vw;
+  }
+  .grid-item-deployable > img {
+    height: 25vw;
+  }
+
+  .grid-4-columns {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }
