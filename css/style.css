@@ -165,8 +165,7 @@ img {
 .navbar a .logo {
   width: 180px;
   height: 50px;
-  background: url(/img/decouvrir-ikagel/pirogue.png) center center/cover
-    no-repeat;
+  background: url(/img/logo.png) center center/cover no-repeat;
 }
 
 .navbar a.lien-logo {
