@@ -711,8 +711,8 @@
     width: 100%;
     height: auto;
   }
-  #fiche-produit .propriétés {
-    padding-bottom: 20px;
+  #fiche-produit .flex-columns .flex-columns > a:nth-child(2) {
+    margin-bottom: 10px;
   }
 
   #fiche-produit .column-2 .fiche-produit_description {
@@ -728,7 +728,7 @@
     margin: 25px 0;
   }
   #poulpe-cuit .photos-poulpe,
-  #poulpe-cuit .photos-poulpe + div {
+  #poulpe-cuit .photos-poulpe + a {
     height: unset !important;
   }
   #poulpe-cuit .conditionnements {
