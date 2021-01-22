@@ -165,7 +165,8 @@ img {
 .navbar a .logo {
   width: 180px;
   height: 50px;
-  background: url("/img/logo.PNG") center center / cover no-repeat;
+  background: url(/img/decouvrir-ikagel/pirogue.png) center center/cover
+    no-repeat;
 }
 
 .navbar a.lien-logo {
@@ -213,7 +214,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(5, 1, 56, 0.1);
+  /* A mettre pour overlay */
 }
 #hero * {
   z-index: 3;

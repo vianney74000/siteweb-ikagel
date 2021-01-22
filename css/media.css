@@ -224,7 +224,7 @@
     padding-top: 5vh;
   }
   #mot-dirigeant h2 {
-    margin-bottom: 5vh;
+    margin-bottom: unset;
   }
 
   #mot-dirigeant .photo-langlois {
