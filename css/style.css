@@ -794,10 +794,7 @@ img {
 }
 .notre-projet .container_notre-projet .flex-columns:nth-child(3) img {
   width: 100%;
-  height: 20vw;
-  /* display: block;
-  margin: auto;
-  margin-bottom: 30px; */
+  height: 14vw;
 }
 
 /* ------------EXOTIQUE TRADITIONEL ------------- */
@@ -1409,8 +1406,8 @@ img {
 }
 
 #fiche-produit .column-2 .photos-poulpe,
-#fiche-produit .column-2 .flex-columns > a,
-#fiche-produit .column-2 .propriétés {
+#fiche-produit .column-2 .flex-columns > a {
+  padding: 10px;
   width: 45%;
   max-height: 600px;
   height: 28vw;
@@ -1455,7 +1452,6 @@ h3 {
 
 #fiche-produit .photos-poulpe + a {
   height: 19vw !important;
-  padding: 10px;
 }
 
 #fiche-produit .photos-poulpe a:nth-child(1) {
