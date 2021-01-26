@@ -948,6 +948,10 @@ img {
   z-index: 1;
 }
 
+#blog #home-article h3 {
+  font-size: 1.5rem;
+}
+
 #showcase .showcase-content p {
   margin-bottom: 1rem;
 }
