@@ -1440,11 +1440,6 @@ img {
   height: 100%;
 }
 
-#fiche-produit .column-2 .propriétés {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 h3 {
   text-align: center;
   padding: 1vw 0 0.3vw 0;

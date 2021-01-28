@@ -11,9 +11,6 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
-  <link rel="stylesheet" href="css/lightbox.min.css">
   <link rel="stylesheet" href="css/utilities.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
@@ -173,39 +170,6 @@
 </footer>
 
 
-<script 
-  src="https://code.jquery.com/jquery-3.5.1.js" 
-  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
-  crossorigin="anonymous">
-</script>
-
-
-<!-- bare de tache -->
-<script>
-
-  // Smooth scrolling
-  
-  // select liens et btn (en fait on a retiré btn car il s'avère que la même classe est utilisé pour le bouton de la Form et que ce code nullifie l'action par défaut associé au clics sur ces classes, or ca empecherait donc l'action de subission de la form puisque Submit a une classe de btn) - quand on click dessus, active la fonction e
-  $('#navbar a ').on('click', function (e) {
-    if (this.hash !=='') {
-      e.preventDefault();
-
-      const hash = this.hash;
-
-      // si le if est respecter, on annime le html et le body
-      $('html, body').animate(
-        {
-          // on scroll top jusqu'a hash qui est en fait this.hash
-          // les -100 sont pour qu'on arrive un peu au dessus et non en plein dedans - élégance
-          scrollTop: $(hash).offset().top - 100
-        },
-        // le 400 détermine la vitesse à laquelle ca va défiller plus haut plus lent
-        400
-      );
-    }
-  });
-
-</script>
 
 
 
