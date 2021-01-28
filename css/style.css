@@ -1350,17 +1350,31 @@ img {
   width: 15%;
   height: 100%;
   background: #fff;
-  background: url(/img/fiches-produit/planche2.jpg) center center/100%;
+  background: url(/img/fiches-produit/Fond-spécialité-left.jpg) center
+    center/100%;
   left: 0;
+}
+
+#specialite-sole #fiche-produit .column-1,
+#specialite-rouget #fiche-produit .column-1 {
+  background: url(/img/fiches-produit/Fond-spécialité-exo-left.jpg) center
+    center/100%;
 }
 
 #fiche-produit .column-3 {
   width: 15%;
   height: 100%;
   background: #fff;
-  background: url(/img/fiches-produit/planche2.jpg) center center/100%;
+  background: url(/img/fiches-produit/Fond-spécialité-rigth.jpg) center
+    center/100%;
   position: absolute;
   right: 0;
+}
+
+#specialite-sole #fiche-produit .column-3,
+#specialite-rouget #fiche-produit .column-3 {
+  background: url(/img/fiches-produit/Fond-spécialité-exo-rigth.jpg) center
+    center/100%;
 }
 
 #fiche-produit .column-2 {
