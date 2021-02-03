@@ -271,33 +271,33 @@
 
   /* SKREI */
 
-  .notre-projet {
+  #notre-projet {
     overflow-x: hidden;
   }
 
-  .notre-projet .container_notre-projet > p + .flex-columns {
+  #notre-projet .container_notre-projet > p + .flex-columns {
     flex-direction: column-reverse;
   }
 
-  .notre-projet .flex-columns .flex-item {
+  #notre-projet .flex-columns .flex-item {
     width: 60%;
     margin-bottom: 0px !important;
   }
 
-  .notre-projet .flex-columns .flex-item:nth-child(2) {
+  #notre-projet .flex-columns .flex-item:nth-child(2) {
     margin-bottom: 5vh;
   }
 
-  .notre-projet::before,
-  .notre-projet::after {
+  #notre-projet::before,
+  #notre-projet::after {
     height: 40%;
     top: 400px;
   }
 
-  .notre-projet .container_notre-projet .flex-columns:nth-child(3) > a {
+  #notre-projet .container_notre-projet .flex-columns:nth-child(3) > a {
     width: 40vw;
   }
-  .notre-projet .container_notre-projet .flex-columns:nth-child(3) > a img {
+  #notre-projet .container_notre-projet .flex-columns:nth-child(3) > a img {
     height: 28vw;
   }
 
@@ -644,35 +644,35 @@
     background-size: 45vw !important;
   }
 
-  .notre-projet .flex-items h2 {
+  #notre-projet .flex-items h2 {
     padding: 0 20px;
   }
 
-  .notre-projet .line {
+  #notre-projet .line {
     display: none;
   }
 
-  .notre-projet .flex-columns .flex-item {
+  #notre-projet .flex-columns .flex-item {
     width: 90%;
   }
 
-  .notre-projet::before,
-  .notre-projet::after {
+  #notre-projet::before,
+  #notre-projet::after {
     display: none;
   }
 
-  .notre-projet
+  #notre-projet
     .container_notre-projet
     .flex-columns:nth-child(3)
     > a:nth-child(2) {
     display: none;
   }
 
-  .notre-projet .container_notre-projet .flex-columns:nth-child(3) > a {
+  #notre-projet .container_notre-projet .flex-columns:nth-child(3) > a {
     width: 55vw;
     padding: 0;
   }
-  .notre-projet .container_notre-projet .flex-columns:nth-child(3) > a img {
+  #notre-projet .container_notre-projet .flex-columns:nth-child(3) > a img {
     height: 32vw;
   }
 

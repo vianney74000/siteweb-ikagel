@@ -703,7 +703,7 @@ img {
   overflow-x: hidden;
 }
 
-.notre-projet {
+#notre-projet {
   background: #f4f4f4;
   position: relative;
   display: flex;
@@ -716,22 +716,22 @@ img {
   margin: auto;
 }
 
-.notre-projet .flex-items {
+#notre-projet .flex-items {
   width: 100%;
 }
 
-.notre-projet h2 {
+#notre-projet h2 {
   color: #000;
 }
 
-.notre-projet .flex-columns {
+#notre-projet .flex-columns {
   align-items: center;
   justify-content: center;
   height: 50%;
   overflow: hidden;
 }
 
-.notre-projet::before {
+#notre-projet::before {
   content: "";
   position: absolute;
   top: 60px;
@@ -743,7 +743,7 @@ img {
   width: 10%;
   transform: rotate(-25deg);
 }
-.notre-projet::after {
+#notre-projet::after {
   content: "";
   position: absolute;
   top: 60px;
@@ -756,7 +756,7 @@ img {
   transform: rotate(25deg);
 }
 
-.notre-projet .flex-item {
+#notre-projet .flex-item {
   margin-top: 20px;
   width: 40%;
   padding: 0 5px;
@@ -767,11 +767,11 @@ img {
   text-align: left;
 }
 
-.notre-projet .flex-item > div a:hover {
+#notre-projet .flex-item > div a:hover {
   opacity: 0.8;
 }
 
-.notre-projet .flex-item > div {
+#notre-projet .flex-item > div {
   position: relative;
   height: 100%;
   display: flex;
@@ -779,16 +779,16 @@ img {
   align-items: center;
 }
 
-.notre-projet .flex-item a {
+#notre-projet .flex-item a {
   height: auto;
   width: 70%;
 }
 
-.notre-projet .container_notre-projet .flex-columns:nth-child(3) > a {
+#notre-projet .container_notre-projet .flex-columns:nth-child(3) > a {
   width: 20vw;
   padding: 20px;
 }
-.notre-projet .container_notre-projet .flex-columns:nth-child(3) img {
+#notre-projet .container_notre-projet .flex-columns:nth-child(3) img {
   width: 100%;
   height: 14vw;
 }
